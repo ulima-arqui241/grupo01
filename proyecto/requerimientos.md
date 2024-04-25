@@ -84,14 +84,14 @@ Medida de respuesta: El 100% de los usuarios deben poder ingresar el código de 
 Entorno: Cualquier dispositivo con acceso a internet.
 Artefacto: Pantalla de adición de partidas deportivas.
 
-### Restricciones: 
+# Modulo 2: Personalización de usuario
+# Modulo 3: Coaching en vivo
+# Modulo 4: Rendimiento del participante
+
+# Restricciones: 
 1. Frontend:
 - Restricción: Implementación en Android Kotlin y Swift UI (IOS)
 - Justificación: Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos. 
 2. Backend:
 - Restricción: Uso de GraphQl como API de acceso a los servicios de base de datos
 - Justificación: GraphQl se encuentra como tendencia por alta flexibilidad
-
-# Modulo 2: Personalización de usuario
-# Modulo 3: Coaching en vivo
-# Modulo 4: Rendimiento del participante
