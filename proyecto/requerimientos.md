@@ -1,4 +1,4 @@
-# Modulo 1: Overview de partidas deportivas
+# Modulo 0: Acceso al sistema
 *Requerimientos funcionales*
 1. Selección de tipo de usuario:
 - El cliente debe seleccionar el tipo de usuario que desea cumplir dentro del aplicativo
@@ -8,16 +8,19 @@
 - En caso el usuario no exista, deberá ingresar un código de verificación
 - En el usuario exista, se deberá colocar las credenciales existentes de acceso
 - En caso el usuario no quiera generar un acceso con credenciales y quiere visualizar el app sin iniciar sesión o registrarse, el usuario puede ingresar al overview con funcionalidades limitadas 
-3. Segmentación de usuarios:
+
+# Modulo 1: Overview de partidas deportivas
+*Requerimientos funcionales*
+1. Segmentación de usuarios:
 - Mostrar las vistas de menús acorde al tipo de usuario accedido 
 - Mostrar las funcionalidades disponibles acorde al tipo de usuario accedido
-4. Visualización de partidos:
+2. Visualización de partidos:
 - Mostrar los partidos en base al tipo de usuario accedido
 - Mostrar partidos propios de un equipo afiliado
 - Priorizar el contenido del equipo afiliado
 - Mostrar partidos de terceros 
 - Mostrar detalles de los partidos como lugar de cancha, participantes, minutos, cantidad de jugadores disponibles, nombre del partido 
-5. Pantalla de adición de partidas deportivas: 
+3. Pantalla de adición de partidas deportivas: 
 - Mostrar una pantalla con un campo a rellenar donde se ingresa un código del partido respectivo
 - Mostrar si la adición ha sido éxitosa
 - Recargar la vista acorde al partido añadido
@@ -85,7 +88,11 @@ Entorno: Cualquier dispositivo con acceso a internet.
 Artefacto: Pantalla de adición de partidas deportivas.
 
 # Modulo 2: Personalización de usuario
+*Requerimientos funcionales*
+
+
 # Modulo 3: Coaching en vivo
+
 # Modulo 4: Rendimiento del participante
 
 # Restricciones: 
