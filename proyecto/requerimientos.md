@@ -9,12 +9,12 @@
 - En el usuario exista, se deberá colocar las credenciales existentes de acceso
 - En caso el usuario no quiera generar un acceso con credenciales y quiere visualizar el app sin iniciar sesión o registrarse, el usuario puede ingresar al overview con funcionalidades limitadas 
 
-# Modulo 1: Overview de partidas deportivas
+# Modulo 1: Feed del usuario
 *Requerimientos funcionales*
 1. Segmentación de usuarios:
-- Mostrar las vistas de menús acorde al tipo de usuario accedido 
+- Mostrar las vistas de menús acorde al tipo de usuario accedido
 - Mostrar las funcionalidades disponibles acorde al tipo de usuario accedido
-2. Visualización de partidos:
+2. Visualización de partidos de interés:
 - Mostrar los partidos en base al tipo de usuario accedido
 - Mostrar partidos propios de un equipo afiliado
 - Priorizar el contenido del equipo afiliado
