@@ -1,4 +1,5 @@
 # Modulo 0: Acceso al sistema
+![Modulo 0](../proyecto/requerimientosImagenes/01.%20Login.png)
 *Requerimientos funcionales*
 1. Selección de tipo de usuario:
 - El cliente debe seleccionar el tipo de usuario que desea cumplir dentro del aplicativo
@@ -62,6 +63,7 @@ Justificación: GraphQl se encuentra como tendencia por alta flexibilidad
 
 
 # Modulo 1: Feed del usuario
+![Modulo 1](../proyecto/requerimientosImagenes/02.%20Home.png)
 *Requerimientos funcionales*
 1. Enseñar partidos: 
 - El usuario podrá visualizar los partidos próximos en caso de que este afiliado a un equipo. Si es que este no esta vinculado a un equipo, este no podrá visualizar los partidos que se aproximan de su equipo.
@@ -114,6 +116,7 @@ Justificación: GraphQl se encuentra como tendencia por alta flexibilidad
 
 
 # Modulo 2: Personalización de usuario
+![Modulo 2](../proyecto/requerimientosImagenes/05.%20Profile.png)
 *Requerimientos funcionales*
 1. Ingreso de datos personales: 
 - El usuario debe poder ingresar sus datos personales, como nombre, apellido, correo electrónico y fecha de nacimiento.
@@ -171,6 +174,8 @@ Justificación: GraphQl se encuentra como tendencia por alta flexibilidad
 
 
 # Modulo 3: Coaching en vivo
+![Modulo 3](../proyecto/requerimientosImagenes/02.%20Home.png)
+
 *Requerimientos funcionales*
 1. Estructura del equipo: El entrenador debe poder visualizar la estructura del equipo, incluyendo la lista de jugadores, sus posiciones y roles dentro del equipo.
 2. Anotación de datos del rendimiento individual: El entrenador debe poder anotar datos del rendimiento individual de cada jugador durante la sesión de coaching en vivo.
