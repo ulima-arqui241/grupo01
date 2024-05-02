@@ -26,3 +26,5 @@ La arquitectura MVI se alinea bien con el desarrollo multiplataforma, ya que fac
 La arquitectura MVI se adapta particularmente bien a casos de uso como la gestión de estados complejos, la comunicación entre diferentes componentes de la aplicación y la representación de datos en la interfaz de usuario. Estos casos de uso son relevantes para Atlestats, que involucra la gestión de equipos, jugadores, partidos, entrenamientos y estadísticas.
 
 Cabe destacar que la selección de la arquitectura adecuada para una aplicación móvil depende de diversos factores específicos del proyecto, como el tamaño del equipo de desarrollo, la complejidad de la aplicación, los recursos disponibles y las preferencias de los desarrolladores. Sin embargo, en el caso de Atlestats, la arquitectura MVI presenta características sólidas que la convierten en una fuerte candidata para garantizar el éxito del proyecto.
+
+[**Volver al índice**](../README.md)
