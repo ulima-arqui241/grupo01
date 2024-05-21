@@ -36,3 +36,5 @@
 -   **Instituciones educativas:** Pueden beneficiarse de la aplicación
     para la gestión de sus equipos deportivos y la promoción del
     deporte.
+
+[**Volver al índice**](../README.md)
