@@ -58,22 +58,6 @@
 
 - **Medida de respuesta:** Efectividad del mecanismo de autenticación para prevenir accesos no autorizados, tiempo que tarda el usuario en desbloquear su cuenta y facilidad del proceso de desbloqueo.
 
-## *Restricciones*
-
-### Frontend:
-
-- **Restricción:** Implementación en Android Kotlin y Swift UI (IOS)
-
-- **Justificación:** Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos.
-
-### Backend:
-
-- **Restricción:** Uso de GraphQl como API de acceso a los servicios de base de datos
-
-- **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
-
----
-
 # Modulo 1: Feed del usuario
 
 ![Modulo 1](../proyecto/images/requerimientosImagenes/Feed.png)
@@ -146,20 +130,6 @@ El feed del usuario es algo que se va a utilizar en todas las iteraciones del ap
   - Número de errores introducidos durante el proceso de integración.
   - Estabilidad y rendimiento general de la aplicación tras la integración.
 
-## *Restricciones*
-
-### Frontend
-
-- **Restricción:** Implementación en Android Kotlin y Swift UI (IOS)
-
-- **Justificación:** Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos.
-
-### Backend:
-
-- **Restricción:** Uso de GraphQl como API de acceso a los servicios de base de datos
-
-- **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
-
 
 # Modulo 2: Personalización de usuario
 ![Modulo 2](../proyecto/images/requerimientosImagenes/Personalizar.png)
@@ -222,20 +192,6 @@ El código relacionado con la personalización del usuario debe estar bien organ
 - **Estímulo:** El equipo de diseño decide renovar la apariencia de la aplicación.
 
 - **Fuente de estímulo:** La necesidad de mantener la aplicación actualizada y atractiva para los usuarios.
-
-
-## *Restricciones*
-
-### Frontend
-
-- **Restricción:** Implementación en Android Kotlin y Swift UI (IOS)
-
-- **Justificación:** Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos.
-
-### Backend
-
-- **Restricción:** Uso de GraphQl como API de acceso a los servicios de base de datos
-- **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
 
 
 # Modulo 3: Coaching en vivo
@@ -308,20 +264,6 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
 - **Respuesta:** El código de la aplicación debe estar diseñado de forma modular y extensible, permitiendo a los desarrolladores agregar nuevas funciones de análisis sin afectar a la funcionalidad existente. La documentación clara y las pautas de codificación coherentes facilitarán la comprensión y modificación del código por parte de nuevos desarrolladores.
 
 - **Medida de respuesta:** Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación
-
-## *Restricciones*
-
-### Frontend:
-
-- **Restricción:** Implementación en Android Kotlin y Swift UI (IOS)
-
-- **Justificación:** Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos.
-
-### Backend:
-
-- **Restricción:** Uso de GraphQl como API de acceso a los servicios de base de datos
-
-- **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
 
 
 # Modulo 4: Rendimiento del participante
@@ -398,18 +340,26 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
   - Número de errores introducidos durante el proceso de integración
   - Estabilidad y rendimiento general de la aplicación tras la integración.
 
-## *Restricciones*
+### Restricciones
 
-### Frontend
+## *Frontend*
 
 - **Restricción:** Implementación en Android Kotlin y Swift UI (IOS)
 
 - **Justificación:** Son los dos sistemas operativos móviles más utilizados en el mercado y estos lenguajes de programación son los más modernos actualmente. Potencialmente no necesitará migración en un tiempo prolongado. Tiene acceso nuevas tecnologías y es óptimo para nuevos dispositivos.
 
-### Backend:
+- **Restricción:**: Uso de Android Studio (Android Kotlin)
+
+- **Justificación:** Es una IDE (Integration Development Environment) integrado con IntelliJ, ideal para el dessarrollo de aplicaciones de Android Kotlin y Java
+
+## *Backend*
 
 - **Restricción:** Uso de GraphQl como API de acceso a los servicios de base de datos
 
 - **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
+
+### Decisiones a nivel de arquitectura
+
+
 
 [**Volver al índice**](../README.md)
