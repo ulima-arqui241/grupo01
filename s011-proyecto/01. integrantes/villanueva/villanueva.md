@@ -1,8 +1,8 @@
 # Andrés Sato
 
-![Andrés Sato](sato.png)
+![Matias Villanueva](villanueva.png)
 
-Andrés Sato es un estudiante de 10mo ciclo en la Universidad de Lima. También es practicante del laboratorio ITLAB en la Universidad de Lima. Está enfocado en la programación móvil, especializado en desarrollo para Android.
+Matias Villanuva es un estudiante de 10mo ciclo en la Universidad de Lima. Cuenta con experiencia en desarrollo en el motor gráfico de Unity y esta interasado en explorar el desarrollo movil o de backend.
 
 [Ver integrantes](../integrantes.md)
 
