@@ -367,7 +367,7 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
   - Número de errores introducidos durante el proceso de integración
   - Estabilidad y rendimiento general de la aplicación tras la integración.
 
-### Restricciones
+# Restricciones
 
 ## *Frontend*
 
@@ -389,36 +389,36 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
 
 - **Justificación:** Los desarrolladores de los aplicativos cuentan con experiencia en PostGres y cumplen las capacidades necesarias para el almacenamiento de datos que se necesitan para este proyecto. 
 
-### Decisiones a nivel de arquitectura (planguage)
+# Decisiones a nivel de arquitectura (planguage)
 
 ## Caso de uso 0: Acceso/ Registro de usuario
-- ## Contexto:
-- ## Diseño propuesto:
-- ## Consideraciones:
-- ## Decisión: 
+- Contexto:
+- Diseño propuesto:
+-  Consideraciones:
+- Decisión: 
 
 ## Caso de uso 1: Feed de usuario
-- ## Contexto:
-- ## Diseño propuesto:
-- ## Consideraciones:
-- ## Decisión: 
+- Contexto:
+- Diseño propuesto:
+- Consideraciones:
+- Decisión: 
 
 ## Caso de uso 2: Personalización de usuario
-- ## Contexto:
-- ## Diseño propuesto:
-- ## Consideraciones:
-- ## Decisión: 
+- Contexto:
+- Diseño propuesto:
+- Consideraciones:
+- Decisión: 
 
 ## Caso de uso 3: Gestión de partidos
-- ## Contexto:
-- ## Diseño propuesto:
-- ## Consideraciones:
-- ## Decisión: 
+- Contexto:
+- Diseño propuesto:
+- Consideraciones:
+- Decisión: 
 
 ## Caso de uso 4: Rendimiento del participante
-- ## Contexto:
-- ## Diseño propuesto:
-- ## Consideraciones:
-- ## Decisión: 
+- Contexto:
+- Diseño propuesto:
+- Consideraciones:
+- Decisión: 
 
 [**Volver al índice**](../README.md)
