@@ -4,7 +4,7 @@
 ### Módulo 0: Acceso al sistema
 - **Escenario:** Un usuario ha comprado un nuevo celular y desea conocer el estado de su equipo a media noche, el celular es Android y no cuenta con ningún aplicativo
 
-    **Táctica:** Prevenir fallas
+> **Táctica:** Prevenir fallas
 
 - Remover el servicio: Colocar un anuncio de "fuera de servicio" si es que el servicio fuese a fallar o estar caído dado un problema interno del servidor o los sistemas conectados. 
 - Prevención de excepciones: Tener un aplicativo que pueda manejar una variedad de errores sin caerse y que sea capaz de registrar los fallos y/o mostrar avisos del potencial fallo al usuario. 
@@ -14,7 +14,7 @@
 ### Módulo 3: Coaching en Vivo
 - **Escenario:** Una persona esta gestionando un partido en vivo y desea marcar el medio tiempo del partido. Esto es porque quiere establecer el tiempo de descanso de los atletas y que los aficionados del equipo sepan que tienen tiempo para reincorporarse dentro de unos minutos
 
-    **Táctica:** Recuperarse de fallas
+> **Táctica:** Recuperarse de fallas
 
 - Actualizaciones de software: Se posee de la capacidad de notificar al usuario de que debe actualizar el aplicativo si es que se ha generado una corrección del sistema o si es que se han modificado aspectos cruciales del aplicativo y que potencialmente podrían prevenir errores en relación a los partidos en vivo. 
 - Redundancia Activa (hot spare): Se ejecutan las acciones que solicita el usuario en un número determinado de nodos, en caso uno de estos fallo, otro nodo se encargará de tomar su lugar en milisegundos en caso de fallas. 
@@ -25,18 +25,16 @@
 ### Módulo 1: Feed del usuario
 - **Escenario:**  En una futura iteración de la aplicación Atlestats, se dispone de una nueva fuente de datos para la información de los partidos. La aplicación debe actualizarse para incorporar esta nueva fuente de datos manteniendo la compatibilidad con las fuentes existentes.
 
-    **Táctica:** Disminuir acoplamiento
+> **Táctica:** Disminuir acoplamiento
 
-Se busca:
 - Refactoring: Si es que dos modulos se ven afectados por un solo cambio significa que se deben cambiar estas partes del código para que no depender de uno del otro y tengan tareas claramente asignadas. 
 - Abstraer servicios comunes: Si es que los módulos tienen distintos roles pero cuentan con funciones similares significa que deben ser implementados de forma más general o abstracta. Asi se no existe la necesidad de modificar funciones similares, esto resulta crucial si es que se desea cambiar fuentes de datos dado que este podría tener cambios en múltiples partes del código. 
 
 ### Módulo 2: Personalización de usuario
 - **Escenario:** Los diseñadores necesitan actualizar la interfaz de usuario del perfil de usuario para adaptarla a un nuevo estilo de diseño.
 
-    **Táctica:** Parametrización
+> **Táctica:** Parametrización
 
-Se busca:
 - Destinar archivo de configuración con todos los colores, strings de contenido de partes estáticas y tamaños de imágenes para que estos puedan ser modificados en una parte del código si es que se desean hacer cambios drásticos en el diseño. Para esto se deben establecer reglas de negocio para establecer las variables destinadas a aspectos reutilizables en el diseño como los colores corporativos, textos y tamaños de imágen (dependiendo del dispositivo). 
 
 ## Rendimiento
