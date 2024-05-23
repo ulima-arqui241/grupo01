@@ -58,6 +58,20 @@
 
 - **Medida de respuesta:** Efectividad del mecanismo de autenticación para prevenir accesos no autorizados, tiempo que tarda el usuario en desbloquear su cuenta y facilidad del proceso de desbloqueo.
 
+### Disponibilidad:
+
+- **Escenario:** Un usuario ha comprado un nuevo celular y desea conocer el estado de su equipo a media noche, el celular es Android y no cuenta con ningún aplicativo
+
+- **Estímulo:** El usuario descarga la aplicación de AtleStat en Android y desea ingresar sesión poco después de media noche, el acceso al sistema falla en generar las credenciales posterior a la media noche 
+
+- **Fuente de estímulo:** Un intento de ingreso de usuario realizado después de media noche en un aplicativo sin credenciales de usuario guardadas. 
+
+- **Artefacto:** Mecanismo de autentificación 
+
+- **Respuesta:** Incrementar la capacidad del servidor y solucionar potenciales errores con el sistema de credenciales. Potencialmente adquirir un servicio de base de datos más confiable
+
+- **Medida de respuesta:** Cantidad de acceso al sistema fallidos
+
 # Modulo 1: Feed del usuario
 
 ![Modulo 1](../proyecto/images/requerimientosImagenes/Feed.png)
@@ -265,6 +279,19 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
 
 - **Medida de respuesta:** Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación
 
+### Disponibilidad
+
+- **Escenario:** Una persona esta gestionando un partido en vivo y desea marcar el medio tiempo del partido. Esto es porque quiere establecer el tiempo de descanso de los atletas y que los aficionados del equipo sepan que tienen tiempo para reincorporarse dentro de unos minutos
+
+- **Estímulo:** El asistente del entrenador trata de colocar en el aplicativo de que hay un medio tiempo en la aplicación pero esta falla en registrar la acción y no se marca el medio tiempo. 
+
+- **Fuente de estímulo:** Acción del usuario y petitición de modificar un evento de partido.
+
+- **Artefacto:** Interacción entre aplicativo y base de datos, API del aplicativo
+
+- **Respuesta:** Encontrar el error que genero este problema y aplicar medidas preventivas ante este tipo de error. Guardar envios tardios o fallidos y actualizarlos una vez que vuelva a estar en línea. Notificar si es que es el sistema ha tenido un problema
+
+- **Medida de respuesta:** Errores de partidos solucionados entre errores totales relacionados a partidos x 100 
 
 # Modulo 4: Rendimiento del participante
 
@@ -350,7 +377,7 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
 
 - **Restricción:**: Uso de Android Studio (Android Kotlin)
 
-- **Justificación:** Es una IDE (Integration Development Environment) integrado con IntelliJ, ideal para el dessarrollo de aplicaciones de Android Kotlin y Java
+- **Justificación:** Es una IDE (Integration Development Environment) integrado con IntelliJ, ideal para el dessarrollo de aplicaciones de Android Kotlin y Java. El IDE tiene funcionalidades que permite la ejecución del código, emulador de aplicación, análisis de rendimiento, logcat, terminal y plugins. 
 
 ## *Backend*
 
@@ -358,8 +385,40 @@ La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, in
 
 - **Justificación:** GraphQl se encuentra como tendencia por alta flexibilidad
 
-### Decisiones a nivel de arquitectura
+- **Restricción:** Uso de PostGres como base de datos
 
+- **Justificación:** Los desarrolladores de los aplicativos cuentan con experiencia en PostGres y cumplen las capacidades necesarias para el almacenamiento de datos que se necesitan para este proyecto. 
 
+### Decisiones a nivel de arquitectura (planguage)
+
+## Caso de uso 0: Acceso/ Registro de usuario
+- ## Contexto:
+- ## Diseño propuesto:
+- ## Consideraciones:
+- ## Decisión: 
+
+## Caso de uso 1: Feed de usuario
+- ## Contexto:
+- ## Diseño propuesto:
+- ## Consideraciones:
+- ## Decisión: 
+
+## Caso de uso 2: Personalización de usuario
+- ## Contexto:
+- ## Diseño propuesto:
+- ## Consideraciones:
+- ## Decisión: 
+
+## Caso de uso 3: Gestión de partidos
+- ## Contexto:
+- ## Diseño propuesto:
+- ## Consideraciones:
+- ## Decisión: 
+
+## Caso de uso 4: Rendimiento del participante
+- ## Contexto:
+- ## Diseño propuesto:
+- ## Consideraciones:
+- ## Decisión: 
 
 [**Volver al índice**](../README.md)
