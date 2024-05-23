@@ -68,12 +68,12 @@
 (Matias)
 Modulo 0:
 
+	
+
+Modulo 2:
 	En primer lugar, autenticar a los actores es fundamental para garantizar que solo los usuarios legítimos puedan acceder al sistema y realizar operaciones críticas, como ingresar datos personales, cargar imágenes y vincularse a un equipo. Implementar contraseñas seguras, que cumplan con criterios de longitud y complejidad, es una medida básica pero efectiva para prevenir accesos no autorizados. La autenticación en dos pasos añade una capa adicional de seguridad, al requerir un código temporal enviado al dispositivo móvil o correo electrónico del usuario, lo que reduce significativamente el riesgo de acceso no autorizado, incluso si la contraseña ha sido comprometida.
 
 	Otra táctica crucial es autorizar a los actores para asegurar que cada usuario tenga acceso solo a las funcionalidades y datos necesarios según su rol dentro de la aplicación. Implementar un sistema de control de acceso basado en los diferentes tipos de usuarios permite definir roles específicos, como usuario estándar, administrador y miembro del equipo, y asignar permisos adecuados a cada uno. Esto garantiza que solo los usuarios autorizados puedan realizar ciertas acciones, como modificar datos personales o acceder a información confidencial del equipo.
-
-Modulo 2:
-
 TODO
 
 Respuesta
