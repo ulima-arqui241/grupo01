@@ -74,11 +74,14 @@
 
 - Notificaciones de seguridad: Configurar alertas para notificar al equipo de seguridad y al usuario sobre intentos repetidos de inicio de sesión fallidos, lo que puede indicar un posible intento de acceso no autorizado. Notificando al usuario vía correo electrónico se puede verificar si es que los intentos fallidos son de este mismo, o si se trata de un intento de acceso indebido.
 
+- Bloqueo de cuenta por intentos fallidos: En caso los intentos persistan y el usuario no haya dado una respuesta confirmando que los intentos son propios, se puede utilizar  un mecanismo de bloqueo de cuenta que bloquee temporalmente el acceso después de un número determinado de intentos fallidos de inicio de sesión. Esta medida ayuda a prevenir ataques de fuerza bruta y protege la seguridad de las cuentas de usuario.
+
 
 ### Modulo 2: Personalización de usuario
 - **Escenario:** El usuario ingresa sus datos personales al crear una cuenta.
 
 > **Táctica:** 
 
+- Monitoreo de actividad sospechosa: Durante el proceso de registro de usuarios, la aplicación debe monitorear continuamente cualquier actividad sospechosa, como múltiples intentos de registro con información incorrecta o solicitudes de registro inusuales. Esto asegura que cualquier actividad maliciosa sea detectado y respondido de manera proactiva.
 
-
+-Evaluación en flujos de mensaje lento: En el caso de que una solicitud de registro demora más de lo habitual, se debe contar con un sistema encargado de estar analizando las comunicaciones para identificar posibles ataques man-in-the-middle. Esta táctica permite detectar y responder a posibles intentos de interceptación de datos y proteger la confidencialidad de la información durante el registro en la aplicación Atlestats.
