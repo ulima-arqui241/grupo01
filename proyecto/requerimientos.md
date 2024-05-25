@@ -214,7 +214,7 @@ El código relacionado con la personalización del usuario debe estar bien organ
 
 ## *Requerimientos funcionales*
 
-**1. Visualización del partido:** 
+**1. Visualización de información:** 
 
 - El entrenador debe poder visualizar la estructura del equipo, incluyendo la lista de jugadores, sus posiciones y roles dentro del equipo.
 - El entrenador debe poder visualizar los partidos que se van a jugar y la hora de inicio de cada uno.
@@ -226,9 +226,10 @@ El código relacionado con la personalización del usuario debe estar bien organ
 - El entrenador debe poder iniciar o finalizar el partido.
 - El entrenador del equipo debe contar con una sección en la que pueda realizar apuntes individuales por cada jugador durante la sesión de coaching en vivo.
 
-**3. Corroborar que se este ejecutando como en vivo:** 
+**3. Ejecución y monitoreo de sesiones en vivo:** 
 
 - El entrenador debe tener la posibilidad de corroborar que la sesión de coaching en vivo se está ejecutando correctamente y recibiendo información en tiempo real.
+-Ele ntrenador tiene la posibilidad de reproducir en tiempo real el partido al que se desea hacer coaching.
 
 ## *Requerimientos no funcionales*
 
