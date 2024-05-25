@@ -214,22 +214,19 @@ El código relacionado con la personalización del usuario debe estar bien organ
 
 ## *Requerimientos funcionales*
 
-**1. Estructura del equipo:** 
+**1. Visualización del partido:** 
 
 - El entrenador debe poder visualizar la estructura del equipo, incluyendo la lista de jugadores, sus posiciones y roles dentro del equipo.
+- El entrenador debe poder visualizar los partidos que se van a jugar y la hora de inicio de cada uno.
 
-**2. Anotación de datos del rendimiento individual:** 
+**2. Configuración del equipo y partido:** 
 
-- El entrenador debe poder anotar datos del rendimiento individual de cada jugador durante la sesión de coaching en vivo.
+- El entrenador debe poder agregar y editar a los jugadores.
+- El entrenador debe poder editar las posiciones de los jugadores y poder reflejar los cambios que ha hecho durante el partido en el aplicativo.
+- El entrenador debe poder iniciar o finalizar el partido.
+- El entrenador del equipo debe contar con una sección en la que pueda realizar apuntes individuales por cada jugador durante la sesión de coaching en vivo.
 
-**3. Anotación de notas sobre el rendimiento individual:** 
-- El entrenador debe poder anotar notas sobre el rendimiento individual de cada jugador durante la sesión de coaching en vivo.
-
-**4. Controlar el partido dependiendo de las fases del partido:** 
-
-- El entrenador debe poder controlar el partido en tiempo real, avanzando y retrocediendo a través de las diferentes fases del juego.
-
-**5. Corroborar que se este ejecutando como en vivo:** 
+**3. Corroborar que se este ejecutando como en vivo:** 
 
 - El entrenador debe tener la posibilidad de corroborar que la sesión de coaching en vivo se está ejecutando correctamente y recibiendo información en tiempo real.
 
