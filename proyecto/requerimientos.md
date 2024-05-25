@@ -233,21 +233,9 @@ El código relacionado con la personalización del usuario debe estar bien organ
 
 ## *Requerimientos no funcionales*
 
-### Rendimiento
-
-- **Escenario:** El entrenador está realizando una sesión de coaching en vivo con un equipo de 10 jugadores.
-
-- **Estímulo:** El entrenador observa múltiples jugadas consecutivas en rápida sucesión.
-
-- **Fuente de estímulo:** La necesidad del entrenador de analizar el juego de forma fluida.
-
-- **Artefacto:** Reproducción de video en tiempo real en la aplicación Atlestats.
-
-- **Respuesta:** La aplicación debe reproducir el video del partido en tiempo real sin latencia o interrupciones significativas, incluso con múltiples jugadores y eventos en pantalla. La reproducción debe ser fluida y responder instantáneamente a los comandos del entrenador.
-
-- **Medida de respuesta:** Tiempo de carga inicial del video, ausencia de latencia durante la reproducción y capacidad para manejar múltiples jugadores y eventos en pantalla sin comprometer la fluidez.
-
 ### Usabilidad
+
+La interfaz de usuario para la funcionalidad de coaching en vivo debe ser intuitiva y accesible, permitiendo al entrenador gestionar y monitorear las sesiones de forma eficiente. Las diferentes opciones a las que el usuario puede acceder deben estar claramente identificadas y ser fáciles de usar, minimizando la curva de aprendizaje para los usuarios.
 
 - **Escenario:** El entrenador es nuevo en el uso de la aplicación de coaching en vivo.
 
@@ -257,9 +245,7 @@ El código relacionado con la personalización del usuario debe estar bien organ
 
 - **Artefacto:** Interfaz de usuario de la herramienta de anotación de datos en la aplicación Atlestats.
 
-### Respuesta 
-
-La interfaz de usuario de la aplicación debe ser intuitiva y fácil de usar, incluso para usuarios sin experiencia previa. Las herramientas de anotación de datos deben estar claramente identificadas y accesibles con un solo toque o clic. La aplicación debe proporcionar instrucciones claras y retroalimentación en tiempo real para guiar al entrenador a través del proceso de anotación de datos.
+- **Respuesta:** La aplicación debe proporcionar instrucciones claras y retroalimentación en tiempo real para guiar al entrenador a través del proceso de anotación de datos.
 
 - **Medida de respuesta:** Tiempo que tarda el entrenador en aprender a utilizar las herramientas de la aplicación y completar tareas de coaching básicas.
 
