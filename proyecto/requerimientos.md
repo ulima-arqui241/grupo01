@@ -251,17 +251,21 @@ La interfaz de usuario para la funcionalidad de coaching en vivo debe ser intuit
 
 ### Mantenibilidad
 
-- **Escenario:** Los desarrolladores necesitan agregar una nueva función de análisis de datos para el coaching en vivo.
+El módulo de coaching en vivo de Atlestats debe ser fácilmente mantenible, permitiendo modificaciones y mejoras futuras sin afectar la funcionalidad existente. La arquitectura del módulo debe estar bien diseñada y documentada para que los desarrolladores puedan introducir nuevas características, corregir errores y actualizar componentes con eficiencia y mínima interrupción.
 
-- **Estímulo:** El equipo de producto decide ampliar las capacidades de análisis de la aplicación.
+- **Escenario:** El equipo de desarrollo decide integrar una nueva funcionalidad de análisis de estadísticas en tiempo real en el módulo de coaching en vivo.
 
-- **Fuente de estímulo:** La necesidad de evolucionar la aplicación para satisfacer las necesidades cambiantes del coaching deportivo.
+- **Estímulo:** Integración de nueva funcionalidad de analisis al modulo de coaching en vivo.
 
-- **Artefacto:** Código de la aplicación de coaching en vivo en Atlestats.
+- **Fuente de estímulo:** La decisión de mejorar la aplicación con la capacidad de análisis en tiempo real para los entrenadores.
+
+- **Artefacto:** El código del módulo de coaching en vivo de la aplicación Atlestats.
 
 - **Respuesta:** El código de la aplicación debe estar diseñado de forma modular y extensible, permitiendo a los desarrolladores agregar nuevas funciones de análisis sin afectar a la funcionalidad existente. La documentación clara y las pautas de codificación coherentes facilitarán la comprensión y modificación del código por parte de nuevos desarrolladores.
 
-- **Medida de respuesta:** Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación
+- **Medida de respuesta:** 
+- Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación.
+- Estabilidad y rendimiento general del módulo de coaching en vivo tras la integración.
 
 ### Disponibilidad
 
