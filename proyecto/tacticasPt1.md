@@ -70,14 +70,15 @@
 
 > **Táctica:** Resistir ataques
 
-- Autentificación en dos pasos: Autenticar a los actores es fundamental para garantizar que solo los usuarios legítimos puedan acceder al sistema y realizar operaciones críticas, como ingresar datos personales. La autenticación en dos pasos añade una capa adicional de seguridad, al requerir un código temporal enviado al dispositivo móvil o correo electrónico del usuario, lo que reduce significativamente el riesgo de acceso no autorizado, incluso si la contraseña ha sido comprometida.
+- Autentificación en dos pasos: Esta autentificación es importante para los casos en los que el atacante logre ingresar tras haber probado varias contraseñas. La autenticación en dos pasos añade una capa adicional de seguridad, al requerir un código temporal enviado al dispositivo móvil o correo electrónico del usuario, lo que reduce significativamente el riesgo de acceso no autorizado, incluso si la contraseña ha sido comprometida.
 
-- Establecer roles de usuario: Implementar un sistema de control de acceso basado en los diferentes tipos de usuarios permite definir roles específicos, como usuario estándar, administrador y miembro del equipo, y asignar permisos adecuados a cada uno. Esto garantiza que solo los usuarios autorizados puedan realizar ciertas acciones, como modificar datos personales o acceder a información confidencial del equipo.
+- Notificaciones de seguridad: Configurar alertas para notificar al equipo de seguridad y al usuario sobre intentos repetidos de inicio de sesión fallidos, lo que puede indicar un posible intento de acceso no autorizado. Notificando al usuario vía correo electrónico se puede verificar si es que los intentos fallidos son de este mismo, o si se trata de un intento de acceso indebido.
 
 
 ### Modulo 2: Personalización de usuario
 - **Escenario:** El usuario ingresa sus datos personales al crear una cuenta.
 
+> **Táctica:** 
 
 
 
