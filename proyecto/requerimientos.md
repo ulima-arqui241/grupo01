@@ -269,17 +269,21 @@ El módulo de coaching en vivo de Atlestats debe ser fácilmente mantenible, per
 
 ### Disponibilidad
 
-- **Escenario:** Una persona esta gestionando un partido en vivo y desea marcar el medio tiempo del partido. Esto es porque quiere establecer el tiempo de descanso de los atletas y que los aficionados del equipo sepan que tienen tiempo para reincorporarse dentro de unos minutos
+El módulo de coaching en vivo de Atlestats debe estar disponible y accesible en todo momento, especialmente durante los partidos en vivo, donde la información en tiempo real es crucial. La arquitectura del sistema debe estar diseñada para minimizar el tiempo de inactividad y manejar picos de uso sin afectar la funcionalidad.
+
+- **Escenario:** Una persona esta gestionando un partido en vivo y desea marcar el medio tiempo del partido. Esto es porque quiere establecer el tiempo de descanso de los atletas y que los aficionados del equipo sepan que tienen tiempo para reincorporarse dentro de unos minutos.
 
 - **Estímulo:** El asistente del entrenador trata de colocar en el aplicativo de que hay un medio tiempo en la aplicación pero esta falla en registrar la acción y no se marca el medio tiempo. 
 
 - **Fuente de estímulo:** Acción del usuario y petitición de modificar un evento de partido.
 
-- **Artefacto:** Interacción entre aplicativo y base de datos, API del aplicativo
+- **Artefacto:** Interacción entre aplicativo y base de datos, API del aplicativo.
 
-- **Respuesta:** Encontrar el error que genero este problema y aplicar medidas preventivas ante este tipo de error. Guardar envios tardios o fallidos y actualizarlos una vez que vuelva a estar en línea. Notificar si es que es el sistema ha tenido un problema
+- **Respuesta:** Encontrar el error que genero este problema y aplicar medidas preventivas ante este tipo de error. Guardar envios tardios o fallidos y actualizarlos una vez que vuelva a estar en línea. Notificar si es que es el sistema ha tenido un problema.
 
-- **Medida de respuesta:** Errores de partidos solucionados entre errores totales relacionados a partidos x 100 
+- **Medida de respuesta:** 
+- El tiempo promedio que toma el sistema para resolver y registrar la acción de marcar el medio tiempo después de un fallo inicial.
+- El porcentaje de acciones de marcar medio tiempo que se registran correctamente tras el primer reintento automático.
 
 # Modulo 4: Rendimiento del participante
 
