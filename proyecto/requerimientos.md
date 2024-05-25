@@ -264,8 +264,8 @@ El módulo de coaching en vivo de Atlestats debe ser fácilmente mantenible, per
 - **Respuesta:** El código de la aplicación debe estar diseñado de forma modular y extensible, permitiendo a los desarrolladores agregar nuevas funciones de análisis sin afectar a la funcionalidad existente. La documentación clara y las pautas de codificación coherentes facilitarán la comprensión y modificación del código por parte de nuevos desarrolladores.
 
 - **Medida de respuesta:** 
-- Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación.
-- Estabilidad y rendimiento general del módulo de coaching en vivo tras la integración.
+  - Tiempo que tarda el equipo de desarrollo en agregar una nueva función de análisis a la aplicación.
+  - Estabilidad y rendimiento general del módulo de coaching en vivo tras la integración.
 
 ### Disponibilidad
 
@@ -282,8 +282,9 @@ El módulo de coaching en vivo de Atlestats debe estar disponible y accesible en
 - **Respuesta:** Encontrar el error que genero este problema y aplicar medidas preventivas ante este tipo de error. Guardar envios tardios o fallidos y actualizarlos una vez que vuelva a estar en línea. Notificar si es que es el sistema ha tenido un problema.
 
 - **Medida de respuesta:** 
-- El tiempo promedio que toma el sistema para resolver y registrar la acción de marcar el medio tiempo después de un fallo inicial.
-- El porcentaje de acciones de marcar medio tiempo que se registran correctamente tras el primer reintento automático.
+  - El tiempo promedio que toma el sistema para resolver y registrar la acción de marcar el medio tiempo después de un fallo inicial.
+  - El porcentaje de acciones de marcar medio tiempo que se registran correctamente tras el primer reintento automático.
+
 
 # Modulo 4: Rendimiento del participante
 
