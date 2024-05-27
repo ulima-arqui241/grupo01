@@ -40,6 +40,6 @@ Adicionalmente, es de suma importancia que un hacker ético posea habilidades en
 ### 3.1. Instalación / Configuración de Servicio
 
 Como se mencionó previamente, una de las herramientas más utilizadas para el hacking ético es el programa Nmap. Este permite a los usuarios mapear redes, evaluar vulnerabilidades y auditar la seguridad de redes, identificar qué puertos están abiertos y las reglas de estos puertos. Por lo que se procederá a dar una breve explicación de como instalar este programa. Para esto, es necesario dirigirse a la página oficial de Nmap y buscar las opciones de descarga. Hoy en día este es un software multiplataforma, por lo que se da la libertad de descargar la versión que corresponda al sistema operativo propio.
-![Opciones de descarga](imagen1.png)
+![Opciones de descarga](Imagenes/imagen1.png)
 
 ## 4. Demo
