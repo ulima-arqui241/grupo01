@@ -15,26 +15,31 @@ Farsole et al. (2010) mencionan que para el proceso de planificación de hacking
 El hacking ético implica la realización de pruebas de penetración (Pentest) o auditorías de seguridad en sistemas informáticos, con la autorización de la empresa u organización, con el objetivo de encontrar fallos de seguridad y reportarlos. OWASP (2020) ofrece una guía para seguir el estándar de ejecución de pruebas de penetración, que brinda sugerencias a lo largo de siete fases sobre los procedimientos a realizar para este tipo de evaluaciones. En primer lugar, se tienen las interacciones previas al compromiso, la etapa inicial en la que se establece una comunicación con la organización interesada y se define el alcance de las pruebas a realizar. En segundo lugar, está la recopilación, donde los encargados de realizar el pentest se enfocan en reunir toda la información posible sobre el objetivo de la prueba. En tercer lugar, se encuentra la fase de modelado de la amenaza. Basándose en la información recopilada, el hacker ético identifica las herramientas o técnicas potenciales con las cuales se podrían explotar las vulnerabilidades. En cuarto lugar, se realiza el análisis de las vulnerabilidades, donde se examina el objetivo para identificar las vulnerabilidades presentes. En quinto lugar, está la fase de explotación, en la cual se procede a intentar explotar las vulnerabilidades identificadas previamente. Es importante resaltar que solo se realiza la explotación de vulnerabilidades acorde al alcance definido en la primera fase. En sexto lugar, se presenta la fase post-explotación. Tras haber obtenido acceso al objetivo mediante alguna de las vulnerabilidades identificadas, se procede a la exploración de los datos. Finalmente, se documentan los hallazgos identificados durante el pentest, cerrando las pruebas con la fase de informe.
 
 El proceso de hacking ético implica el uso de herramientas específicas con la capacidad de poder detectar las vulnerabilidades, aunque estas no siempre tienen la capacidad de detectarlas en su totalidad ayudan a simplificar el proceso. Ushmani (2018) nos brindan una lista de las herramientas empleadas para este tipo de hacking:
-•	Escáneres de vulnerabilidad
-•	Packet Sniffers
-•	Crackers de contraseñas
-•	Hardware de hacking
+- Escáneres de vulnerabilidad
+-	Packet Sniffers
+-	Crackers de contraseñas
+-	Hardware de hacking
 También nos mencionan aquellos softwares de código abierto que son empleados para realizar este tipo de tareas:
-•	Nmap
-•	Ether Peek
-•	WebInspect
-•	Ethereal
-•	Kismet
-•	Nikto
-•	QualysGuard
-•	SuperScan
-•	ToneLoc
-•	LC4
-•	LANguard Scanner de Network Security
-•	Nessus
-•	Escáneres de internet
+-	Nmap
+-	Ether Peek
+-	WebInspect
+-	Ethereal
+-	Kismet
+-	Nikto
+-	QualysGuard
+-	SuperScan
+-	ToneLoc
+-	LC4
+-	LANguard Scanner de Network Security
+-	Nessus
+-	Escáneres de internet
 Adicionalmente, es de suma importancia que un hacker ético posea habilidades en diversos aspectos, como los protocolos de red, la autenticación, los cortafuegos, las aplicaciones web, así como en lenguajes de programación tales como HTML, Ruby, Python y JavaScript, estas competencias son esenciales para una comprensión exhaustiva y profesional de las redes y sistemas objetivo (Ushmani, 2018). 
 
 ## 3. Consideraciones Técnicas
+
+### 3.1. Instalación / Configuración de Servicio
+
+Como se mencionó previamente, una de las herramientas más utilizadas para el hacking ético es el programa Nmap. Este permite a los usuarios mapear redes, evaluar vulnerabilidades y auditar la seguridad de redes, identificar qué puertos están abiertos y las reglas de estos puertos. Por lo que se procederá a dar una breve explicación de como instalar este programa. Para esto, es necesario dirigirse a la página oficial de Nmap y buscar las opciones de descarga. Hoy en día este es un software multiplataforma, por lo que se da la libertad de descargar la versión que corresponda al sistema operativo propio.
+![Opciones de descarga](imagen1.png)
 
 ## 4. Demo
