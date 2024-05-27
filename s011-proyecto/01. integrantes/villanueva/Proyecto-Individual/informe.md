@@ -43,6 +43,7 @@ Como se mencionó previamente, una de las herramientas más utilizadas para el h
 
 ## Figura 3.1.1
 Opciones de descarga
+
 ![Opciones de descarga](Imagenes/imagen1.png)
 
 ## 4. Demo
