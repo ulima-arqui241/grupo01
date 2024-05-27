@@ -93,3 +93,44 @@ Lista de comandos y opciones
 
 ![Lista de comandos y opciones](Imagenes/Figura3.2.4.png)
 ## 4. Demo
+
+### 4.1. Escenario práctico
+
+José, propietario de Itsec Games, un sitio web de juegos en línea, está preocupado por la seguridad de su plataforma. Reconoce la importancia de proteger los datos de sus usuarios y la integridad de su sitio web. Para garantizar la seguridad de su plataforma, decide contratar a un hacker ético para realizar un escaneo a la página web y verificar la seguridad de esta. El objetivo principal de esta evaluación de seguridad es identificar y mitigar posibles vulnerabilidades en el sitio web itsecgames.com y el servidor en el que se está alojando. Esto incluye la identificación de puertos abiertos, la evaluación de vulnerabilidades de la página web y facilidad de identificar las conexiones e información del servidor. En caso se identifique una vulnerabilidad, José ha cedido el permiso para poder explotarla y ver como es que se comporta la página frente a esta.
+
+### 4.2. Pasos para la demo
+
+En primer lugar, es necesario poder obtener la dirección IP del servidor en el que esta hosteada la web, para lo cual se utilizara la pagina whatweb, la cual se encargara de brindarnos la información necesaria.
+
+### Figura 4.2.1
+Información de dirección objetivo
+
+![Información de dirección objetivo](Imagenes/Figura4.2.1.png)
+
+Teniendo esta información, se puede utilizar Nmap para realizar la penetración. Es necesario abrir la consola para verificar que se cuente con el programa instalado correctamente. Para esto se debe ingresar el comando nmap y esperar a que se despliegue la información de comandos que presenta el sistema para poder verificar que este instalado correctamente. Tras esto, se procede a realizar el primer escaneo enfocado a identificar cuales son los puertos que se encuentran abiertos en la red objetivo. Para esto se emplea el comando nmap -sT 31.3.96.40. En este caso el resultado nos dice que los puertos que estan abiertos son el 22, 80 y 443.
+
+### Figura 4.2.2
+Escaneo simple de puertos
+
+![Escaneo simple de puertos](Imagenes/Figura4.2.2.png)
+
+Para la identificación de los puertos, también se puede realizar un escaneo de tipo forzado. Para este se utiliza el comando nmap -sS. Adicional a esto, se puede realizar un pin a las diferentes IP que se encuentran conectadas a la red, lo cual nos otorgara información más sensible sobre el objetivo. En este caso, dado que se han identificado puertos abiertos, se seleccionarán los puertos que se desean escanear con el comando -p, siendo el comando final nmap -sS -p 80,443 31.3.96.0/24.
+
+### Figura 4.2.3
+Escaneo forzado a las IP de la red
+
+![Escaneo forzado a las IP de la red](Imagenes/Figura4.2.3.png)
+
+Contando con esta información, lo que se procederá a hacer es utilizar una de las direcciones IP conectadas a la red como un decoy, adicionando el comando -D seguido de la dirección señuelo. Este paso se realiza con la finalidad de esconder la IP de la máquina origen que está realizando la exploración. El comando final para esta acción es el siguiente, nmap -sS -D 31.3.96.177 -p 80,443 31.3.96.0/24. A este también se le puede adicionar un método para predecir el sistema operativo en el cual se esta alojando el servidor, adicionado -O previa a la ip objetivo seleccionada, nmap -sS -D 31.3.96.177 -p 80,443 -O 31.3.96.205.
+
+### Figura 4.2.4
+Predicción de sistema operativo
+
+![Predicción de sistema operativo](Imagenes/Figura4.2.4.png)
+
+Para finalizar con la penetración, se procederá a identificar las vulnerabilidades de seguridad con las que cuenta la página web. Nmap cuenta con una gran variedad de scripts para revisar si es que el objetivo cuenta con vulnerabilidades específicas. Sin embargo, también se presenta la posibilidad de ejecutar todos los scripts secuencialmente y obtener un reporte de que vulnerabilidades se han identificado. Par esto se procederá a adicionar el comando --script vuln, donde el comando final será el siguiente, nmap -sS -D 31.3.96.177 --script vuln 31.3.96.205.
+
+### Figura 4.2.5
+Identificación de vulnerabilidades
+
+![Identificación de vulnerabilidades](Imagenes/Figura4.2.5.png)
