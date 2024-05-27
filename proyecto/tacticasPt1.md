@@ -50,11 +50,6 @@
 > **Táctica:**  Controlar la demanda de recursos
 
 -	Incrementar eficiencia en el uso de recursos: Se buscará incrementar la eficiencia en el uso de recursos, dado que al seguir dicha directiva se puede optimizar el proceso de registro por parte del servicio mismo. Esto implicaría menores tiempos de espera y latencia, además de un menor tamaño de datos enviados hacia y por parte del servidor si es que se aplica buenas practicas entre la comunicación cliente-servidor. Estos puntos favorecerían una conectividad pobre por parte de algún usuario, al ser menor el tamaño de la información transmitida y el tiempo de conexión.
-
-### Modulo 3: TODO: FRANCO: ELIMINAR ESTE PUNTO PORQUE NO SE REPITE EN 03.REQUERIMIENTOS.MD
-
-	Esto se justifica porque la introducción de concurrencia permite manejar múltiples solicitudes y eventos en paralelo, reduciendo el tiempo de bloqueo y asegurando una reproducción de video fluida y sin interrupciones. Al utilizar múltiples hilos de ejecución, la aplicación puede procesar la reproducción en tiempo real de manera más eficiente, respondiendo instantáneamente a los comandos del entrenador y manejando la visualización simultánea de múltiples jugadores y eventos sin comprometer la calidad.
-
 ### Modulo 4:
 
 - **Escenario:** El entrenador está analizando las estadísticas de rendimiento de un equipo completo después de un partido importante, utilizando la aplicación en una tablet con una conexión a internet lenta.
@@ -73,7 +68,7 @@
 
 - Diseñar estructura de navegación claras y fáciles de seguir. Durante el uso que le dan los usuarios nuevos a la aplicación, es importante que las pantallas disponibles sean lo más intuitivas y coherentes con lo existente en el mercado.
 
-### Modulo 1:TODO
+### Modulo 1:
 
 - **Escenario:** La segmentación del feed debe tener un sentido lógico que el usuario puede adquirir la información de los partidos en un orden dependiendo de la relevancia de los eventos que esten ocurriendo. 
 
@@ -81,7 +76,7 @@
 
 - Al usuario ingresar por primera vez al feed, es necesario que se muestren pasos de cómo utilizar y aprovechar esta sección de la mejor manera.
 
-### Modulo 2:TODO
+### Modulo 2:
 
 - **Escenario:** El usuario desea actualizar su imagen de perfil con una foto más reciente.
 
@@ -89,7 +84,7 @@
 
 - Cuando el usuario desea ingresar una nueva foto y está en el carrete por seleccionar una foto, si marca la deseada, debe aparecer una opción que confirme su decisión y posteriormente avice el progreso de la subida.
 
-### Modulo 3:TODO
+### Modulo 3:
 
 - **Escenario:** El entrenador es nuevo en el uso de la aplicación de coaching en vivo.
 
@@ -97,7 +92,7 @@
 
 - Cuando el entrenador desea realizar coaching en vivo durante un partido de su equipo y es la primera vez que ingresa a la opción, debe haber un diseño centrado en el entrenador, con las opciones de decisión más importantes para el momento. Ya sea que él pueda seleccionar un botón con gol a favor, gol en contra, amarilla o roja para algún jugador, cambio anticipado, entre otros.
 
-### Modulo 4:TODO
+### Modulo 4:
 
 - **Escenario:** Un nuevo entrenador, que no está familiarizado con la aplicación, necesita analizar el rendimiento individual de un jugador en varios partidos.
 
