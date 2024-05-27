@@ -41,9 +41,54 @@ Adicionalmente, es de suma importancia que un hacker ético posea habilidades en
 
 Como se mencionó previamente, una de las herramientas más utilizadas para el hacking ético es el programa Nmap. Este permite a los usuarios mapear redes, evaluar vulnerabilidades y auditar la seguridad de redes, identificar qué puertos están abiertos y las reglas de estos puertos. Por lo que se procederá a dar una breve explicación de como instalar este programa. Para esto, es necesario dirigirse a la página oficial de Nmap y buscar las opciones de descarga. Hoy en día este es un software multiplataforma, por lo que se da la libertad de descargar la versión que corresponda al sistema operativo propio.
 
-## Figura 3.1.1
+### Figura 3.1.1
 Opciones de descarga
 
 ![Opciones de descarga](Imagenes/imagen1.png)
 
+Cada versión de sistema operativo cuenta con una sección de descarga de la última versión estable, esta es la que se recomienda descargar para evitar posibles problemas con el software.
+
+### Figura 3.1.2
+Versión de Nmap más estable
+
+![Versión de Nmap más estable](Imagenes/imagen2.png)
+
+Una vez descargado el instalador, en la primera opción darle al botón “I Agree” y en la sección de componentes a descargar, activar los componentes Npcap y Check online para agregarlos a la descarga.
+
+### Figura 3.1.3
+Selección de componentes
+
+![Selección de componentes](Imagenes/imagen3.png)
+
+Tras esto, se tendrá que darle clic al botón de “Next” y posteriormente al de instalar, tras esto el programa se instalará en la computadora y se podrá utilizar el ejecutable de Nmpa de nombre Zenmap o ejecutar los comandos de Nmap a través del CMD.
+
+### 3.2. Primeros pasos
+
+Existen dos métodos para poder empezar a utilizar Nmap. En primer lugar, se puede realizar todo de forma más visual empleando el ejecutable de Zenmap. Cuya interfaz nos permite seleccionar la red objetivo y nos ofrece diferentes tipos de acciones a realizar con esta. Por ejemplo, si se desea realizar un escaneo a los dispositivos que están conectados a la red, basta con ingresar la ip objetivo y seleccionar el perfil “Intense Scan”, tras esto el programa realizara un escaneo y mostrara la cantidad de dispositivos.
+
+### Figura 3.2.1
+Uso de Nmap por interfaz gráfica
+
+![Uso de Nmap por interfaz gráfica](Imagenes/imagen4.png)
+
+Este programa cuenta con una lista amplia de diferentes acciones que se puede realizar a la dirección objetivo. Para acceder a esta lista, se debe seleccionar el botón desplegable ubicado en la parte superior derecha, la cual hace referencia a tipo de perfil del escaneo.
+
+### Figura 3.2.2
+Lista de perfiles de escaneo
+
+![Lista de perfiles de escaneo](Imagenes/imagen5.png)
+
+En segundo lugar, tenemos la ejecución de comandos a través de CMD. Para verificar que este esté correctamente instalado, mediante línea de comandos, será necesario abrir la consola de Windows y ejecutar el comando “nmap”. Tras verificar que está instalado correctamente, se podrán realizar diferentes acciones a una dirección IP objetivo mediante la consola. Por ejemplo, para hacer identificar los dispositivos conectados a una red se debe emplear únicamente el comando “nmap -sP” y la dirección objetivo. Tras ejecutar este comando, se mostrará la cantidad de IP conectadas a la red objetivo.
+
+### Figura 3.2.3
+Uso de Nmap por linea de comandos
+
+![Uso de Nmap por linea de comandos](Imagenes/imagen6.png)
+
+Para poder explorar los diferentes comandos que se pueden utilizar o investigar que tipos de opciones ofrece este programa, se puede ingresar la linea “nmap –help”. Se desplegará una lista de todos los diferentes tipos de escaneos disponibles y los comandos que pertenecen a cada uno.
+
+### Figura 3.2.4
+Lista de comandos y opciones
+
+![Lista de comandos y opciones](Imagenes/imagen7.png)
 ## 4. Demo
