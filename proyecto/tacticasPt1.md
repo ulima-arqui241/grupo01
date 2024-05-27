@@ -1,6 +1,7 @@
 # Tácticas
 
 ## Disponibilidad
+
 ### Módulo 0: Acceso al sistema
 - **Escenario:** Un usuario ha comprado un nuevo celular y desea conocer el estado de su equipo a media noche, el celular es Android y no cuenta con ningún aplicativo
 
@@ -10,8 +11,8 @@
 - Prevención de excepciones: Tener un aplicativo que pueda manejar una variedad de errores sin caerse y que sea capaz de registrar los fallos y/o mostrar avisos del potencial fallo al usuario. 
 - Modelos predictivos: Adquirir o implementar un sistema de monitoreo que permita tener el control sobre la cantidad de usuarios conectados o haciendo solicitudes al mismo tiempo y el estrés que este implica. Este modelo podría mostrar potenciales fallas o caídas en caso de que el sistema este sobrepasando sus capacidades actuales. 
 
-
 ### Módulo 3: Coaching en Vivo
+
 - **Escenario:** Una persona esta gestionando un partido en vivo y desea marcar el medio tiempo del partido. Esto es porque quiere establecer el tiempo de descanso de los atletas y que los aficionados del equipo sepan que tienen tiempo para reincorporarse dentro de unos minutos
 
 > **Táctica:** Recuperarse de fallas
@@ -22,7 +23,9 @@
 
 
 ## Mantenibilidad
+
 ### Módulo 1: Feed del usuario
+
 - **Escenario:**  En una futura iteración de la aplicación Atlestats, se dispone de una nueva fuente de datos para la información de los partidos. La aplicación debe actualizarse para incorporar esta nueva fuente de datos manteniendo la compatibilidad con las fuentes existentes.
 
 > **Táctica:** Disminuir acoplamiento
@@ -31,6 +34,7 @@
 - Abstraer servicios comunes: Si es que los módulos tienen distintos roles pero cuentan con funciones similares significa que deben ser implementados de forma más general o abstracta. Asi se no existe la necesidad de modificar funciones similares, esto resulta crucial si es que se desea cambiar fuentes de datos dado que este podría tener cambios en múltiples partes del código. 
 
 ### Módulo 2: Personalización de usuario
+
 - **Escenario:** Los diseñadores necesitan actualizar la interfaz de usuario del perfil de usuario para adaptarla a un nuevo estilo de diseño.
 
 > **Táctica:** Parametrización
@@ -41,27 +45,66 @@
 
 ### Modulo 0:
 
-	Se buscará incrementar la eficiencia en el uso de recursos, dado que al seguir dicha directiva se puede optimizar el proceso de registro por parte del servicio mismo. Esto implicaría menores tiempos de espera y latencia, además de un menor tamaño de datos enviados hacia y por parte del servidor si es que se aplica buenas practicas entre la comunicación cliente-servidor. Estos puntos favorecerían una conectividad pobre por parte de algún usuario, al ser menor el tamaño de la información transmitida y el tiempo de conexión.
+- **Escenario:**  Un cliente nuevo intenta registrarse en la aplicación por primera vez en un dispositivo móvil con una conexión a internet lenta.
 
-### Modulo 3:
+> **Táctica:**  Controlar la demanda de recursos
+
+-	Incrementar eficiencia en el uso de recursos: Se buscará incrementar la eficiencia en el uso de recursos, dado que al seguir dicha directiva se puede optimizar el proceso de registro por parte del servicio mismo. Esto implicaría menores tiempos de espera y latencia, además de un menor tamaño de datos enviados hacia y por parte del servidor si es que se aplica buenas practicas entre la comunicación cliente-servidor. Estos puntos favorecerían una conectividad pobre por parte de algún usuario, al ser menor el tamaño de la información transmitida y el tiempo de conexión.
+
+### Modulo 3: TODO: FRANCO: ELIMINAR ESTE PUNTO PORQUE NO SE REPITE EN 03.REQUERIMIENTOS.MD
 
 	Esto se justifica porque la introducción de concurrencia permite manejar múltiples solicitudes y eventos en paralelo, reduciendo el tiempo de bloqueo y asegurando una reproducción de video fluida y sin interrupciones. Al utilizar múltiples hilos de ejecución, la aplicación puede procesar la reproducción en tiempo real de manera más eficiente, respondiendo instantáneamente a los comandos del entrenador y manejando la visualización simultánea de múltiples jugadores y eventos sin comprometer la calidad.
 
 ### Modulo 4:
 
-	Al mantener múltiples copias de los datos en almacenamiento con diferentes velocidades de acceso (por ejemplo, uso de caché) permite que la aplicación acceda rápidamente a la información necesaria, minimizando el tiempo de carga incluso con una conexión lenta.
+- **Escenario:** El entrenador está analizando las estadísticas de rendimiento de un equipo completo después de un partido importante, utilizando la aplicación en una tablet con una conexión a internet lenta.
+
+> **Táctica:** Mantener múltiples copias de los datos
+
+- Al mantener múltiples copias de los datos en almacenamiento con diferentes velocidades de acceso (por ejemplo, uso de caché) permite que la aplicación acceda rápidamente a la información necesaria, minimizando el tiempo de carga incluso con una conexión lenta.
 
 ## Usabilidad
 
-### Modulo 0: TODO
+### Modulo 0:
+
+- **Escenario:** Un usuario nuevo, que no está familiarizado con la aplicación, necesita iniciar sesión por primera vez.
+
+> **Táctica:** Navegación intuitiva
+
+- Diseñar estructura de navegación claras y fáciles de seguir. Durante el uso que le dan los usuarios nuevos a la aplicación, es importante que las pantallas disponibles sean lo más intuitivas y coherentes con lo existente en el mercado.
 
 ### Modulo 1:TODO
 
+- **Escenario:** La segmentación del feed debe tener un sentido lógico que el usuario puede adquirir la información de los partidos en un orden dependiendo de la relevancia de los eventos que esten ocurriendo. 
+
+> **Táctica:** Documentación y ayuda.
+
+- Al usuario ingresar por primera vez al feed, es necesario que se muestren pasos de cómo utilizar y aprovechar esta sección de la mejor manera.
+
 ### Modulo 2:TODO
+
+- **Escenario:** El usuario desea actualizar su imagen de perfil con una foto más reciente.
+
+> **Táctica:** Retroalimientación instantanea.
+
+- Cuando el usuario desea ingresar una nueva foto y está en el carrete por seleccionar una foto, si marca la deseada, debe aparecer una opción que confirme su decisión y posteriormente avice el progreso de la subida.
 
 ### Modulo 3:TODO
 
+- **Escenario:** El entrenador es nuevo en el uso de la aplicación de coaching en vivo.
+
+> **Táctica:** Diseño centrado en el usuario.
+
+- Cuando el entrenador desea realizar coaching en vivo durante un partido de su equipo y es la primera vez que ingresa a la opción, debe haber un diseño centrado en el entrenador, con las opciones de decisión más importantes para el momento. Ya sea que él pueda seleccionar un botón con gol a favor, gol en contra, amarilla o roja para algún jugador, cambio anticipado, entre otros.
+
 ### Modulo 4:TODO
+
+- **Escenario:** Un nuevo entrenador, que no está familiarizado con la aplicación, necesita analizar el rendimiento individual de un jugador en varios partidos.
+
+> **Táctica:** Consistencia en el diseño.
+
+- Ya que para poder acceder a esta sección de la aplicación, es necesario que el entrenador ya haya utilizado al menos un módulo previamente, la consistencia brindada por la aplicación en cada pantalla debe ser acorde a lo que el usuario se espera, es por ello que el estudio de UX/UI debe tomar en cuenta esas casuísticas.
+
 
 ## Seguridad
 
