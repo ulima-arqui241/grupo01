@@ -134,3 +134,37 @@ Para finalizar con la penetración, se procederá a identificar las vulnerabilid
 Identificación de vulnerabilidades
 
 ![Identificación de vulnerabilidades](Imagenes/Figura4.2.5.png)
+
+Dado que la pagina utilizada principalmente está elaborada específicamente para el test de penetraciones, mas no para el test de vulnerabilidades, para la parte de explotar una vulnerabilidad se va a emplear la página web https://pentest-ground.com:4280/. Para esta demo se va a brindar un ejemplo de como realizar un ataque Cross Site Scripting (XSS). Este tipo de ataques se caracterizan por la inyección de código aprovechando una vulnerabilidad de seguridad dentro de una pagina web. Para el primer caso se va a realizar un ataque XSS reflejado, el cual se limita a incrustar el código malicioso en una URL. Para esto, se empleará un script simple recuperado del siguiente repositorio de Github, https://github.com/swisskyrepo/PayloadsAllTheThings. Al identificar que la pagina objetivo presenta una barra de texto la cual nos redirige o realiza una acción cuando se rellena, se puede realizar este tipo de ataques. Para este caso se utilizará el siguiente script:
+< script>alert('Prueba Demo XSS')</ script>
+Al ejecutarlo se podrá observar la caja de alerta y se cargará una nueva URL con el script inyectado:
+https://pentest-ground.com:4280/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%28%27Prueba+Demo+XSS%27%29%3C%2Fscript%3E#
+
+### Figura 4.2.6
+Ataque XSS reflejado
+
+![Ataque XSS reflejado](Imagenes/Figura4.2.6.png)
+
+En el segundo caso, se va a realizar un ataque XSS almacenado. Este se encarga de almacenar el código malicioso en la base de datos del objetivo, haciendo que cada vez que un usuario ingresa a la pagina web, el script se ejecute de manera automática. Para esto, se va a utilizar el script previo. En este caso, se puede identificar que la alerta se ejecuta en el enlace original, y cada vez que el usuario recargue la página seguirá saliendo hasta que se haga un reset a la base de datos.
+
+### Figura 4.2.7
+Ataque XSS almacenado
+
+![Ataque XSS almacenado](Imagenes/Figura4.2.7.png)
+
+### 4.3. Resultados
+
+Tras la penetración y la simulación de explotar una vulnerabilidad, se ha identificado de la página web de Itsec Games no esta lo suficientemente protegida. Esto debido a la facilidad con la que se pudo acceder y realizar los escaneos requeridos por el dueño. Se pudieron identificar correctamente los puertos que se encontraban abiertos, las diferentes direcciones IP que se encontraban en la red y una amplia lista de vulnerabilidades presentes en su página. En lo que respecta a realizar un ataque, los dos tipos de XSS efectuados se dieron con éxito, permitiendo inyectar scripts en la base de datos y una URL adicional que puede ser empleada para atacar a los usuarios de Itsec Games. 
+
+## 5. Referencias
+
+- Farsole, A. A., Kashikar, A. G., & Zunzunwala, A. (2010). Ethical Hacking. International journal of computer applications, 1(10), 14-20. https://doi.org/10.5120/229-380
+
+- OWASP. (2020). Penetration Testing Methodologies. https://owasp.org/www-project-web-security-testing-guide/stable/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies
+
+- Palmer, C. C. (2001). Ethical hacking. IBM systems journal, 40(3), 769-780. https://doi.org/10.1147/sj.403.0769
+
+- Sahare, B., Naik, A., & Khandey, S. (2014). Study of ethical hacking. Computer Science, 6-10.
+
+- Ushmani, A. (2018). Ethical Hacking. International Journal of Information Technology, 4(6), 1-4.
+
