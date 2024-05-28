@@ -219,31 +219,43 @@ Herramientas Freemium (Free con opciones de paga)
 | PagerDuty | Herramienta de gestión de incidentes y alertas, gratuita con límites y opciones de pago para características avanzadas |
 | Terraform Cloud | Servicio gestionado para Terraform, gratuito con límites y opciones de pago para características avanzadas |
 
+### e. El ciclo de vida de Devops:
+
+Según Atlassian, el ciclo de vida de DevOps se representa con un bucle infinito, simbolizando la colaboración y mejora continua. Se divide en ocho fases que integran desarrollo y operaciones:
+
+> 1. Descubrir: Los equipos colaboran en talleres para explorar y priorizar ideas, alineándolas con objetivos estratégicos y el impacto en los clientes, guiados por metodologías ágiles.
+> 2. Planificar: Adopción de prácticas ágiles para mejorar la velocidad y calidad mediante la gestión iterativa de proyectos y desarrollo de software.
+> 3. Compilar: Uso de Git como sistema de control de versiones para gestionar ramas, fusiones e historiales, facilitando herramientas y flujos de trabajo eficaces.
+> 4. Probar: Integración continua (CI) para fusionar cambios de código y realizar pruebas automatizadas, garantizando la calidad y previsibilidad del código.
+> 5. Implementar: Implementación continua (CD) que permite publicar funciones de forma automática y constante, mejorando la velocidad y productividad.
+> 6. Operar: Gestión integral de servicios de TI, abarcando diseño, implementación, configuración y mantenimiento de la infraestructura.
+> 7. Observar: Supervisión para identificar y resolver incidencias rápidamente, notificando al equipo sobre cambios o fallos para mantener el funcionamiento correcto.
+> 8. Feedback Continuo: Evaluación de publicaciones y generación de informes para mejorar procesos y recoger opiniones de los clientes, incorporándolas en versiones futuras.
+
+Estas fases están interrelacionadas y requieren una comunicación constante y coordinación para asegurar la misma velocidad y calidad a lo largo del ciclo de vida del producto.
+
 ## 4. Demo
 
 ### 4.1. Escenario Práctico
 
-> Una empresa de desarrollo móvil se encuentra en el desarrollo y despliegue de su aplicación móvil más reciente llamada Contador De Makis.
-> La aplicación no hace uso de ningún servicio en internet, ni la empresa cuenta con un backend para la aplicación.
-> Es por ello que, la aplicación solo será desarrollada y posteriormente subida a la tienda mediante su proceso establecido.
-> - La empresa quiere implementar una cultura DevOps entre sus equipos y es por ello que el ingeniero de DevOps (tú) es solicitado de integrar GitHub Actions en el proceso de CD.
+> Una API desarrollada en Python es finalizada para proceder a su despliegue, para lo cual se ha automatizado un pipeline mediante jenkins en donde se desplegará el servicio mediante un contenedor de docker.
 
 ### 4.2. Pasos para la demo
 
 > Para realizar la demo, será necesario:
 
-> 1. Hardware y Software:
-> - Una Mac.
-> - Xcode instalado.
+> 1. Software:
+> - Jenkins y Docker instalado.
 > 2. Cuenta en Plataformas:
 > - Cuenta en GitHub.
 > 3. Herramientas y Librerías:
-> - Git instalado en tu Mac.
+> - Git instalado en tu computadora.
+> - Pytest instalado en el servidor
 
-Créditos: https://www.andrewhoog.com/post/how-to-build-an-ios-app-with-github-actions-2023/
+Créditos: https://www.youtube.com/watch?v=6njM8g5hKuk
 
 > Los pasos para ejecutar la demo son los siguientes:
-> 1. Configuración de código:
+> 1. Descargar el código que contiene el API de Python y sus pruebas unitarias: TODO
 > - https://github.com/MrcoAlba/contador-de-makis
 > 2. Subimos el proyecto a GitHub
 > 3. Creamos una acción de Github personalizada
