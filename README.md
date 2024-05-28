@@ -18,13 +18,13 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
 
 - [2. Proyecto](/proyecto/)
 
--[Descripcion](/proyecto/01.%20descripcion.md)
--[ModeloNegocio](/proyecto/01.2.%20modeloNegocio.md)
--[Organigrama](/proyecto/01.3.%20organigrama.md)
--[StakeHolders](/proyecto/01.4.%20stakeholders.md)
--[Stack](/proyecto/01.5.%20stackTecnologico.md)
--[Requerimientos,Restricciones y Decisiones](/proyecto/02.%20requerimientos.md)
--[Tacticas](/proyecto/03.%20tacticas.md)
--[Arquitectura](/proyecto/04.%20arquitectura.md)
+  - [Descripcion](/proyecto/01.%20descripcion.md)
+  - [ModeloNegocio](/proyecto/01.2.%20modeloNegocio.md)
+  - [Organigrama](/proyecto/01.3.%20organigrama.md)
+  - [StakeHolders](/proyecto/01.4.%20stakeholders.md)
+  - [Stack](/proyecto/01.5.%20stackTecnologico.md)
+  - [Requerimientos,Restricciones y Decisiones](/proyecto/02.%20requerimientos.md)
+  - [Tacticas](/proyecto/03.%20tacticas.md)
+  - [Arquitectura](/proyecto/04.%20arquitectura.md)
     
     
