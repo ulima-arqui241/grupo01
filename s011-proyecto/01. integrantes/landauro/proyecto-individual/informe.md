@@ -238,75 +238,71 @@ Estas fases están interrelacionadas y requieren una comunicación constante y c
 
 ### 4.1. Escenario Práctico
 
-> Una API desarrollada en Python es finalizada para proceder a su despliegue, para lo cual se ha automatizado un pipeline mediante jenkins en donde se desplegará el servicio mediante un contenedor de docker.
+> Una API desarrollada en Python es finalizada para proceder a su despliegue, para lo cual se ha automatizado un pipeline mediante jenkins en donde se desplegará el servicio en el puerto local 3030.
 
 ### 4.2. Pasos para la demo
 
 > Para realizar la demo, será necesario:
 
 > 1. Software:
-> - Jenkins y Docker instalado.
+> - Jenkins instalado.
 > 2. Cuenta en Plataformas:
 > - Cuenta en GitHub.
 > 3. Herramientas y Librerías:
 > - Git instalado en tu computadora.
-> - Pytest instalado en el servidor
 
 Créditos: https://www.youtube.com/watch?v=6njM8g5hKuk
 
 > Los pasos para ejecutar la demo son los siguientes:
-> 1. Descargar el código que contiene el API de Python y sus pruebas unitarias: TODO
-> - https://github.com/MrcoAlba/contador-de-makis
+> 1. Descargar el código que contiene el API de Python y sus pruebas unitarias:
+> - https://github.com/MrcoAlba/appPythonDeploy
 > 2. Subimos el proyecto a GitHub
-> 3. Creamos una acción de Github personalizada
-> 4. Creación de archivo de configuración:
-> - Nombre y ubicación del archivo: carpetaBase/.github/workflows/main.yml
-> - Código de la acción:
-`
-name: iOS starter workflow
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-jobs:
-  build:
-    name: Build and Test default scheme using any available iPhone simulator
-    runs-on: macos-latest
-    steps:
-        - name: Checkout
-            uses: actions/checkout@v4
-        - name: Set up provisioning profile
-            run: |
-            mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-            echo "${{ secrets.PROVISIONING_PROFILE }}" | base64 --decode > ~/Library/MobileDevice/Provisioning\ Profiles/Profile.mobileprovision
-        - name: Set up signing certificate
-            run: |
-            echo "${{ secrets.CERTIFICATE }}" | base64 --decode > certificate.p12
-            echo "${{ secrets.CERTIFICATE_PASSWORD }}" | base64 --decode > password.txt
-            security import certificate.p12 -k ~/Library/Keychains/login.keychain -P $(cat password.txt) -T /usr/bin/codesign
-        - name: Build
-            run: |
-            xcodebuild -version
-            xcodebuild -showsdks
-            xcodebuild -list
-            xcodebuild clean build \
-            project contadorFinal.xcodeproj \
-            destination 'platform=iOS Simulator,name=iPhone 11,OS=latest'
-        - name: Test
-            run: |
-            xcodebuild test \
-            project contadorFinal.xcodeproj \
-            destination 'platform=iOS Simulator,name=iPhone 11,OS=latest'
-`
-> 5. Creación de credenciales para correr las pruebas:
-> - CERTIFICATE: password
-> - CERTIFICATE_PASSWORD: password
-> - CERTIFICATE_PROFILE: password
-> 6. Ejecutar acción
+> 3. Abrimos jenkins
+> 4. Creamos un pipeline en jenkins y vamos a la sección de pipeline:
+> 5. Ingresamos el siguiente script:
+
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: 'master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/MrcoAlba/appPythonDeploy']])
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip3 install --no-cache-dir -r requirements.txt'
+            }
+        }
+        stage('Build') {
+            steps {
+                git branch: 'master', url: 'https://github.com/MrcoAlba/appPythonDeploy'
+                sh 'python3 ops.py'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'python3 -m pytest'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'python3 app.py'
+            }
+        }
+    }
+}
+
+6. Ejecutamos el script por medio de la opción build now.
+7. Hacemos uso de la api en Python por medio de Flask
 
 ### 4.3. Resultados
 
-> - Ejecución de pruebas en el simulador de iPhone 11.
-> - Resumen de las pruebas realizadas, indicando cuántas pasaron y cuántas fallaron.
-> - Detalles de cualquier falla en las pruebas, si es que hubo alguna.
+> - Habremos realizado las etapas de devops de desarrollo, construcción, testing y despliegue.
+> - La ejecución habrá sido simple y rápida.
+> - Para mayor alcance futuro, revisar la siguiente fuente:
+> - https://www.youtube.com/watch?v=jbEF3mB7UcU
+
+### 4.4. Video de la demo:
+
+> - https://www.youtube.com/watch?v=z38eo5c3hcg
