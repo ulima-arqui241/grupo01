@@ -51,7 +51,7 @@ Cabe resaltar que la denormalización nace a partir del supuesto que el modelo d
 
 ## 3. Instrucciones de la demo
 
-Para la demo es escogio CouchDB, la cual es una base de datos orientada a documentos que otorga una API REST mediate metodos HTTP, además de diferentes funcionalidades intersantes que veremos poco a poco.
+Para la demo es escogio CouchDB, la cual es una base de datos orientada a documentos que otorga una API REST mediate metodos HTTP, además de diferentes funcionalidades intersantes que veremos poco a poco. Una video de la siguiente demostracion puede ser hallada en el siguiente enlace: https://drive.google.com/file/d/1fwqtn2c0bJRrFdDiTnff7NRs-7nTp_Yr/view?usp=sharing
 
 Para comenzar, primero debemos comprobar que tengamos docker instalado. Si poseen docker desktop o pueden ejecutar el siguiente comando:
 
