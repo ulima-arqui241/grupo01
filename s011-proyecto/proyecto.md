@@ -19,6 +19,7 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
   - 1. [StakeHolders](/proyecto/01.4.%20stakeholders.md)
   - 1. [Stack](/proyecto/01.5.%20stackTecnologico.md)
   - 2. [Requerimientos,Restricciones y Decisiones](/proyecto/02.%20requerimientos.md)
+  - 2. [Decisiones de arquitectura](/proyecto/02.1%20Decisiones%20a%20nivel%20de%20arquitectura.md)
   - 3. [Tacticas](/proyecto/03.%20tacticas.md)
   - 4. [Arquitectura](/proyecto/04.%20arquitectura.md)
   - 5. [Estructura Inicial de código: IOS](/proyecto/Codigo/Frontend/Movil/iOS/)
