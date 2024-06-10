@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A71A2872C16B0A900F204F1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2862C16B0A900F204F1 /* Style.swift */; };
+		2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */; };
+		2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */; };
+		2A71A2932C16B6EC00F204F1 /* FormButtonInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2922C16B6EC00F204F1 /* FormButtonInput.swift */; };
+		2A71A2952C16BF7000F204F1 /* ColorDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2942C16BF7000F204F1 /* ColorDivider.swift */; };
+		2A71A2972C16BFB000F204F1 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2962C16BFB000F204F1 /* CapsuleButton.swift */; };
 		9D5A117E2C04C8B4007FF196 /* AtlestatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A117D2C04C8B4007FF196 /* AtlestatApp.swift */; };
 		9D5A11802C04C8B4007FF196 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5A117F2C04C8B4007FF196 /* ContentView.swift */; };
 		9D5A11822C04C8B7007FF196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5A11812C04C8B7007FF196 /* Assets.xcassets */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A71A2862C16B0A900F204F1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextInput.swift; sourceTree = "<group>"; };
+		2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		2A71A2922C16B6EC00F204F1 /* FormButtonInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonInput.swift; sourceTree = "<group>"; };
+		2A71A2942C16BF7000F204F1 /* ColorDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDivider.swift; sourceTree = "<group>"; };
+		2A71A2962C16BFB000F204F1 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		9D5A117A2C04C8B4007FF196 /* Atlestat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atlestat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5A117D2C04C8B4007FF196 /* AtlestatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlestatApp.swift; sourceTree = "<group>"; };
 		9D5A117F2C04C8B4007FF196 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +46,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A71A2852C16B0A000F204F1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2A71A28A2C16B37E00F204F1 /* Components */,
+				2A71A2862C16B0A900F204F1 /* Style.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2A71A28A2C16B37E00F204F1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2A71A28E2C16B60100F204F1 /* Buttons */,
+				2A71A28D2C16B5F900F204F1 /* Form */,
+				2A71A2942C16BF7000F204F1 /* ColorDivider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2A71A28D2C16B5F900F204F1 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */,
+				2A71A2922C16B6EC00F204F1 /* FormButtonInput.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		2A71A28E2C16B60100F204F1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				2A71A2962C16BFB000F204F1 /* CapsuleButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		2A71A28F2C16B63C00F204F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9D5A11712C04C8B3007FF196 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +109,8 @@
 		9D5A117C2C04C8B4007FF196 /* Atlestat */ = {
 			isa = PBXGroup;
 			children = (
+				2A71A28F2C16B63C00F204F1 /* Extensions */,
+				2A71A2852C16B0A000F204F1 /* Shared */,
 				9D5A118B2C04C9B5007FF196 /* Scenes */,
 				9D5A117D2C04C8B4007FF196 /* AtlestatApp.swift */,
 				9D5A117F2C04C8B4007FF196 /* ContentView.swift */,
@@ -180,9 +238,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */,
+				2A71A2972C16BFB000F204F1 /* CapsuleButton.swift in Sources */,
 				9D5A11912C04C9E2007FF196 /* LoginView.swift in Sources */,
+				2A71A2932C16B6EC00F204F1 /* FormButtonInput.swift in Sources */,
+				2A71A2952C16BF7000F204F1 /* ColorDivider.swift in Sources */,
 				9D5A11802C04C8B4007FF196 /* ContentView.swift in Sources */,
 				9D5A117E2C04C8B4007FF196 /* AtlestatApp.swift in Sources */,
+				2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */,
+				2A71A2872C16B0A900F204F1 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
