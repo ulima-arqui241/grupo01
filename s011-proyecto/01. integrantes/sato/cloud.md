@@ -45,6 +45,12 @@ Mejores Prácticas para un Throttling Efectivo
 - Flexibilidad: Las políticas de throttling deben ser adaptables a los cambios en la demanda, permitiendo ajustes rápidos para evitar interrupciones del servicio.
 - Alertas Tempranas: Configurar alertas para recibir notificaciones cuando se alcancen los límites de throttling permite una respuesta oportuna ante posibles problemas.
 - Comunicación Transparente: Informar a los usuarios sobre las políticas de throttling y sus implicaciones fomenta la comprensión y evita sorpresas desagradables.
+
+# Demo
+![Throttling](./throttling.png)
+Link del código: https://github.com/andresatodiaz/ecommerceapp_rest_api
+
+
 # Fuentes:
 
 - Amazon Web Services (AWS):
