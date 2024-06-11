@@ -48,7 +48,8 @@ Mejores Prácticas para un Throttling Efectivo
 
 # Demo
 ![Throttling](./throttling.png)
-Link del código: https://github.com/andresatodiaz/ecommerceapp_rest_api
+- Link del código: https://github.com/andresatodiaz/ecommerceapp_rest_api
+- Video: https://youtu.be/MUUxF16ge-c
 
 
 # Fuentes:
