@@ -23,28 +23,34 @@ app.get("/databaseCheck", async (req, res) => {
       message: "Database cannot be reached",
     });
   } else {
+    try {
+      await insertBaseUser();
 
-    await insertBaseUser()
-
-    res.send({
-      status: databaseStatus,
-      message: "Database available",
-    });
+      res.send({
+        status: databaseStatus,
+        message: "Database available",
+      });
+    } catch {
+      res.status(405).send({
+        status: 4,
+        message: "Unable to save data on database"
+      })
+    }
   }
 });
 
 app.get("/insertUser", async (req, res) => {
-    try {
-        let doc = await insertBaseUser()
-        res.status(200).send({
-            msg: "Created!",
-            doc: doc
-        })
-    } catch (error) {
-        res.status(500).send({
-            error: error,
-        })
-    }
+  try {
+    let doc = await insertBaseUser();
+    res.status(200).send({
+      msg: "Created!",
+      doc: doc,
+    });
+  } catch (error) {
+    res.status(500).send({
+      error: error,
+    });
+  }
 });
 
 app.get("/allUsers", (req, res) => {
@@ -65,7 +71,7 @@ async function insertBaseUser() {
   });
   try {
     let doc = await member.save();
-    return doc
+    return doc;
   } catch (error) {
     throw new Error(error);
   }

@@ -8,28 +8,38 @@ app.listen(port, () => {
 });
 
 app.get("/", async (req, res) => {
-  const startHealthTimeCheck = process.hrtime();
-  const response = await fetch(`${baseUrl}healthCheck`);
-  const endHealthTimeCheck = process.hrtime(startHealthTimeCheck);
-  const availabilityStatus = response.status;
-  const availableData = await response.json()
-
-  const startDBTime = process.hrtime();
-  const dbResponse = await fetch(`${baseUrl}databaseCheck`);
-  const endDBTime = process.hrtime(startDBTime);
-  const dbStatusCode = dbResponse.status;
-  const dbData = await dbResponse.json()
-
-  res.send({
-    healthCheck: {
-      responseTime: endHealthTimeCheck,
+  try {
+    const startHealthTimeCheck = process.hrtime();
+    const response = await fetch(`${baseUrl}healthCheck`);
+    const endHealthTimeCheck = process.hrtime(startHealthTimeCheck);
+    const availabilityStatus = response.status;
+    const availableData = await response.json();
+    const availabilityData = {
       status: availabilityStatus,
-      data: availableData
-    },
-    databaseCheck: {
-      responseTime: endDBTime,
+      responseTime: endHealthTimeCheck[1] / 1_000_000,
+      data: availableData,
+    };
+
+    const startDBTime = process.hrtime();
+    const dbResponse = await fetch(`${baseUrl}databaseCheck`);
+    const endDBTime = process.hrtime(startDBTime);
+    const dbStatusCode = dbResponse.status;
+    const dbData = await dbResponse.json();
+    const databaseData = {
       status: dbStatusCode,
-      data: dbData
-    },
-  });
+      responseTime: endDBTime[1] / 1_000_000,
+      data: dbData,
+    };
+
+    res.send({
+      healthCheck: availabilityData,
+      databaseCheck: databaseData,
+    });
+  } catch  {
+    res.status(500).send({
+      status: 500,
+      message: "Endpoint is not live"
+    })
+  }
+  
 });
