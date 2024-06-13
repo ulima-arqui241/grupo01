@@ -1,0 +1,47 @@
+services:
+  endpoint:
+    build: ./src
+    image: endpoint
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+      - ENDPOINT_URL=3000
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/src
+    networks:
+      - node-network
+
+  health_endpoint:
+    build: ./healthSrc
+    image: health_endpoint
+    environment:
+      - ENDPOINT_URL=http://endpoint:3000/
+      - HEALTH_PORT=4000
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mongodb
+      - endpoint
+    volumes:
+      - .:/src
+    networks:
+      - node-network
+
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata6:/data/db
+    networks:
+      - node-network
+
+volumes:
+  dbdata6:
+
+networks:
+  node-network:
+    driver: bridge
