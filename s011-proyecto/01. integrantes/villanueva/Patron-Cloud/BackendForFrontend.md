@@ -1,4 +1,4 @@
-## Desarrollo Conceptual
+## 1. Desarrollo Conceptual
 
 Una aplicación puede comenzar enfocándose en una interfaz web de escritorio, desarrollando un backend que soporte sus funciones. Con el tiempo, al crecer la base de usuarios, se crea una aplicación móvil que debe interactuar con el mismo backend. Esto convierte al backend en un servicio de propósito general que debe servir tanto a la interfaz de escritorio como a la móvil. Sin embargo, dadas las diferencias de cada dispositivo, los requerimientos pueden verse alterados. Para cubrir esta problemática, Newman (2015) desarrollo el patrón Backend For Frontend (BFF). Este implica diseñar un backend distinto para cada tipo de experiencia de usuario, en lugar de emplear un único backend general que soporte todas las interfaces. Cada debe contar con su propio back, adaptado para satisfacer los requerimientos específicos.
 
@@ -10,7 +10,7 @@ Diagrama patrón BFF
 ![Diagrama patrón BFF](Imagenes/Imagen1.png)
 
 
-## Problemas y Consideraciones
+## 2. Problemas y Consideraciones
 
 - Problemas y Consideraciones
 
@@ -22,7 +22,7 @@ Diagrama patrón BFF
 
 - Se debe tomar en consideración cuánto tiempo llevará implementar este patrón.
 
-## Demo
+## 3. Demo
 
 Para la demo se desarrollaron dos backends, uno para una interfaz web y otro para una interfaz móvil, y dos frontend para poder realizar las peticiones. Los backends fueron desarrollados en Java Script, utilizando Nodejs, Express, Postgres, Sequelize y Docker. Es importante que, para configurarlos con Docker, se realicen una serie de pasos. En primer lugar, se debe clonar el repositorio donde se aloja el proyecto. Una vez se ha clonado, cada backend tiene ya configurados los parámetros necesarios para crear la imagen y el contenedor, por lo que se puede iniciar el proceso de creado de la imagen ingresando el comando docker compose up -d node_db en una terminar Git Bash. 
 
@@ -58,3 +58,23 @@ Una vez se ha terminado con el proceso de creación del contenedor, se puede rea
 Ejemplo petición POST
 
 ![alt text](Imagenes/Figura3.5.png)
+
+Cuando se han configurado ambos backends, se deben ejecutar las paginas web para poder hacer pruebas. Estas están desarrolladas en Java Script utilizando Node y React, por lo que es de suma importancia ejecutar el comando npm install en primer lugar. Para ejecutar la pagina web se debe ingresar el comando npm start, como uno de los servidores se está ejecutando en el puerto 3000 se debe darle si a la opción de asignar otro puerto.
+
+### Figura 3.6
+Ejecución de página web
+
+![alt text](Imagenes/Figura3.6.png)
+
+Finalmente, se podrán realizar las pruebas ingresando valores en el campo de id, el backend se encarga de generar un id automáticamente de forma aditiva, por lo que este estará enlazado al usuario acorde al orden de su creación. Estas respuestas mostraran información más o menos información dependiendo del frontend que se este utilizando.
+
+### Figura 3.7
+Ejemplo Frontend Web
+
+![alt text](Imagenes/Figura3.7.png)
+
+## REFERENCIAS
+
+- Microsoft. (s. f.). Backends for Frontends pattern. Microsoft.com. Recuperado 13 de junio de 2024, de https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends
+
+- Newman, S. (2015). Pattern: Backends For Frontends. Sam Newman & Associates. https://samnewman.io/patterns/architectural/bff/
