@@ -5,7 +5,3 @@ En esta iteración se busca formar una base en la capa visual de Atlestat, por l
 ## Componentes
 
 Se tendran componentes reutilizables, los cuales que permitirán mantener una uniformidad en la interfaz
-
-## Testing
-
-Para comprobar el rendimiento de la aplicación se plantea una suite de pruebas que verifique el correcto y eficaz funcionamiento de la aplicación
