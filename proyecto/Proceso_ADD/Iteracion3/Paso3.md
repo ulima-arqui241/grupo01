@@ -1,22 +1,11 @@
 # Elementos a refinar
 
-Dado que se empieza de un sistema hecho de cero, en esta iteracion se busca crear submodulos que ayuden a cumplir los atributos y funcionalidades planteadas
+En esta iteración se busca formar una base en la capa visual de Atlestat, por lo que se formará el proyecto base, y se dará una estructura que permitira concentrarse en la usabilidad de la aplicación
 
-## Submodulo de autenticacion
+## Componentes
 
-Responsable de las siguientes funciones:
+Se tendran componentes reutilizables, los cuales que permitirán mantener una uniformidad en la interfaz
 
-- Validacion de credenciales
-- Generacion de tokens de autenticacion
-- Verificacion de seguridad ante intentos
+## Testing
 
-## Submodulo de gestion de usuarios
-
-Responsable de las siguientes funciones:
-
-- Registro de usuarios
-- Actualizacion de datos de usuarios
-
-## Submodulo de base de datos
-
-Posee los esquemas de usuarios y tokens
+Para comprobar el rendimiento de la aplicación se plantea una suite de pruebas que verifique el correcto y eficaz funcionamiento de la aplicación

@@ -1,23 +1,22 @@
 # Objetivo de la iteracion
 
-El objetivo de esta iteracion es establecer el sistema de autenticacion mientras se mantiene el nivel de seguridad establecido en los escenarios de atributos de calidad
+El objetivo de esta iteracion es desarrollar las interfaces gráficas considerando la usabilidad y experiencia del usuario
 
 ## Drivers
 
-- Casos de uso: Funcionalidades relacionadas a la integracion de nuevos usuarios
-  - CU-1
-  - CU-2
-  - CU-4
+- Casos de uso
+  - CU-01
+  - CU-02
+  - CU-04
+  - CU-05
+  - CU-06
+  - CU-07
 - Escenarios de atributos de calidad
-  - QA-1
-  - QA-5
-  - QA-8
-  - QA-15
+  - QA-04
+  - QA-12
+  - QA-16
 - Restricciones
-  - CON-2
-  - CON-5
+  - CON-01
 - Preocupaciones
-  - CRN-1
-  - CRN-2
-  - CRN-3
-  - CRN-4
+  - CRN-02
+  - CRN-05

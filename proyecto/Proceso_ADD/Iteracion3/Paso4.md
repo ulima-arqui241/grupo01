@@ -1,13 +1,9 @@
 # Decisiones de diseño
 
-| Codigo | Decisión de diseño                                                                                                            | Fundamentación                                                                                                          |
-|--------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| DEC-01 | La estructura lógica del submódulo utilizará un patrón de módulo de arquitectura de capas (sin contar capas de interfaz gráfica), en las cuales se tendrá la capa de almacenamiento, capa de acceso de datos y capa de lógica de negocio | Se utilizará un despliegue de capas para mantener la seguridad (CRN-01) en el sistema y agrupar los submódulos en la capa de lógica de negocio (CRN-03). |
-| DEC-02 | Para desplegar los servicios de mensajería por correo se utilizará el servicio de SES que será llamado por medio de una función Lambda. | Esto asegura la seguridad (CRN-01), rendimiento y escalabilidad (CRN-02)                                                  |
-| DEC-03 | La data almacenada en la base de datos estará siempre encriptada                                                               | Crucial para almacenar los datos de forma segura. Con esto se cumplen las restricciones de tecnología (CRN-04) y seguridad (CON-05) |
-
-## Diagrama de capas
-
-![capas](/proyecto/images/ADD/Iteracion1/capas.png)
+| Codigo | Decisión de diseño                                                                     | Fundamentación                                                                                                                              |
+| ------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| DEC-13 | Uso de patrón MVI para la creación de las interfaces                                   | El patrón MVI permite desacoplar la capa de datos y servicios del apartado visual, lo cual permite actualizar las interfaces                |
+| DEC-14 | Testing realizado sobre operaciones de cálculos y renderización costosas               | Esto asegura que el rendimiento de la aplicación (CRN-02) pueda ser optimizado                                                              |
+| DEC-15 | Uso de SwiftUI y Jetpack Compose como frameworks de construccion de interfaces nativas | Permite una creacion rapida de interfaces en iOS y Android respectivamente, mientras que ofrece un gran rendimiento nativo (CON-01, CRN-02) |
 
 [Volver al inicio](../ADD.md)
