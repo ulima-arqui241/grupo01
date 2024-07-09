@@ -127,6 +127,7 @@ fun FeedScreen(
                         .padding(bottom = 20.dp))
                     feedVM.pastMatches.forEach {
                         PastMatch(it)
+                        Spacer(modifier = Modifier.padding(top=10.dp))
                     }
                 }
             }
@@ -228,7 +229,7 @@ fun NextMatch(
                     }
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(painterResource(id = R.drawable.baseline_access_time_24), contentDescription = "time")
-                        Text(text = match.duracion)
+                        Text(text = match.duracion+" minutos")
                     }
                 }
                 Row(

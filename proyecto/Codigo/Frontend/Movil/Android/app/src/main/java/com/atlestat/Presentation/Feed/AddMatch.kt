@@ -228,7 +228,7 @@ fun CoachOptions(navController: NavController,loginVM: LoginVM,feedVM: FeedVM){
         // Update the selectedDate state
         val dayOfMonthText = if(dayOfMonth<10) "0$dayOfMonth" else "$dayOfMonth"
         val monthText= if(month<10) "0${month+1}" else "${month+1}"
-        selectedDate.value = "$dayOfMonthText$monthText$year"
+        selectedDate.value = "$dayOfMonthText/$monthText/$year"
     }
 
     // Function to show DatePickerDialog
