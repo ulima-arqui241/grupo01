@@ -2,7 +2,7 @@
 
 ## Diccionario:
 
-- PERSONA: Tabla principal de la base de datos Atlestat, la cual almacena la información principal de la cuenta registrada. 
+- PERSONA: Tabla principal de la base de datos Atlestat, la cual almacena la información de la cuenta registrada. 
 - AMAZON WEB SERVICE (AWS): plataforma de servicios en la nube que ofrece una amplia gama de servicios integrales de centros de datos a nivel global.
 - RDS: Amazon Relational Database Service es una colección de servicios administrados que facilita las tareas de configuración, operación y escalado de una base de datos en la nube.
 - AMAZON COGNITO: directorio de usuarios, un servidor de autenticación y un servicio de autorización para los tokens y credenciales de AWS.
