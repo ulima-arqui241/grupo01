@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct CapsuleButton: View {
+    var withBackground = true
     var text: String
     var doWhenPressed: () -> ()
     
@@ -16,19 +17,25 @@ struct CapsuleButton: View {
             doWhenPressed()
         } label: {
             HStack{
-                
                 Text(text)
                     .font(.headline)
                     .bold()
+
                     .expandHorizontally()
             }
             .bold()
-            .foregroundColor(.white)
+            .foregroundColor(withBackground ? .white : AppColors.primaryColor)
             .padding(.vertical, 12)
             .background {
-                AppColors.primaryColor
+                if withBackground{
+                    AppColors.primaryColor
+                        .clipShape(Capsule())
+                    
+                } else {
+                    Capsule()
+                        .stroke(AppColors.primaryColor)
+                }
             }
-            .clipShape(Capsule())
             .shadow(radius: 2)
         }
     }

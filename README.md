@@ -35,15 +35,43 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
     - [Consolidacion](./proyecto/QAW/2.%20Consolidacion.md)
     - [Priorizacion](./proyecto/QAW/3.%20Priorizacion.md)
     - [Refinamiento](./proyecto/QAW/4.%20Refinamiento.md)
+  - [Proceso ADD](/proyecto/Proceso_ADD/ADD.md)
+  - Drivers
+    - [Casos de uso](./proyecto/Proceso_ADD/Drivers/CasosUso.md)
+    - [Escenarios de atributos de calidad](./proyecto/Proceso_ADD/Drivers/EscAtributos.md)
+    - [Restricciones](./proyecto/Proceso_ADD/Drivers/Restricciones.md)
+    - [Preocupaciones a nivel de arquitectura](./proyecto/Proceso_ADD/Drivers/ConcArquitectura.md)
+  - [Elección de drivers de entrada](./proyecto/Proceso_ADD/Entradas.md)
+  - Iteración 1
+    - [Paso 2](./proyecto/Proceso_ADD/Iteracion1/Paso2.md)
+    - [Paso 3](./proyecto/Proceso_ADD/Iteracion1/Paso3.md)
+    - [Paso 4](./proyecto/Proceso_ADD/Iteracion1/Paso4.md)
+    - [Paso 5](./proyecto/Proceso_ADD/Iteracion1/Paso5.md)
+    - [Paso 6](./proyecto/Proceso_ADD/Iteracion1/Paso6.md)
+    - [Paso 7](./proyecto/Proceso_ADD/Iteracion1/Paso7.md)
+  - Iteración 2
+    - [Paso 2](./proyecto/Proceso_ADD/Iteracion2/Paso2.md)
+    - [Paso 3](./proyecto/Proceso_ADD/Iteracion2/Paso3.md)
+    - [Paso 4](./proyecto/Proceso_ADD/Iteracion2/Paso4.md)
+    - [Paso 5](./proyecto/Proceso_ADD/Iteracion2/Paso5.md)
+    - [Paso 6](./proyecto/Proceso_ADD/Iteracion2/Paso6.md)
+    - [Paso 7](./proyecto/Proceso_ADD/Iteracion2/Paso7.md)
+  - Iteración 3
+    - [Paso 2](./proyecto/Proceso_ADD/Iteracion3/Paso2.md)
+    - [Paso 3](./proyecto/Proceso_ADD/Iteracion3/Paso3.md)
+    - [Paso 4](./proyecto/Proceso_ADD/Iteracion3/Paso4.md)
+    - [Paso 5](./proyecto/Proceso_ADD/Iteracion3/Paso5.md)
+    - [Paso 6](./proyecto/Proceso_ADD/Iteracion3/Paso6.md)
+    - [Paso 7](./proyecto/Proceso_ADD/Iteracion3/Paso7.md)
   - Trabajo individual 1
     - [Sato: Tópicos de arquitectura: Análisis estático](/s011-proyecto/01.%20integrantes/sato/proyectoPersonal/proyecto.md)
     - [Marquez: Bases de datos NoSQL - Orientadas a documentos](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual/reporteInstrucciones.md)
     - [Villanueva: Hacking ético](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual/informe.md)
     - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md)
-  - Trabajo individual 2
+  <!-- - Trabajo individual 2
     - [Sato: Tópicos de arquitectura: Análisis estático](/s011-proyecto/01.%20integrantes/sato/proyectoPersonal/proyecto.md)
     - [Marquez: Bases de datos NoSQL - Orientadas a documentos](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual/reporteInstrucciones.md)
     - [Villanueva: Hacking ético](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual/informe.md)
-    - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md)
+    - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md) -->
     
     

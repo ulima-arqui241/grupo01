@@ -7,6 +7,33 @@
 
 import SwiftUI
 
+struct FormInputButton: View {
+    
+    var placeholder: String
+    var text: String
+    var icon: FormInputIcons?
+    var keyboardType: UIKeyboardType?
+    var doWhenPressed: () -> ()
+    
+    var body: some View {
+        Button {
+            doWhenPressed()
+        } label: {
+            FormTextInput(placeholder: placeholder,
+                          text: .constant(text),
+                          icon: icon,
+                          keyboardType: keyboardType)
+            .overlay(alignment: .trailing) {
+                Image(systemName: "chevron.right")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .foregroundStyle(AppColors.foregroundColor)
+            }
+        }
+    }
+}
+
 struct FormButtonInput<T: Hashable & CaseIterable & RawRepresentable>: View where T.AllCases: RandomAccessCollection, T.RawValue == String {
     
     var icon: FormInputIcons?

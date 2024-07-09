@@ -12,6 +12,7 @@ struct FormTextInput: View {
     var placeholder: String
     @Binding var text: String
     var icon: FormInputIcons?
+    var keyboardType: UIKeyboardType?
     var secure = false
     @State private var showPassword = false
     
@@ -20,13 +21,14 @@ struct FormTextInput: View {
             if let icon{
                 icon.getIcon()
             }
-            
-            if secure {
-               SecureField(placeholder, text: $text)
-            } else {
-                TextField(placeholder, text: $text)
+            Group{
+                if secure {
+                   SecureField(placeholder, text: $text)
+                } else {
+                    TextField(placeholder, text: $text)
+                }
             }
-            
+            .keyboardType(keyboardType != nil ? keyboardType! : .default)
         }
         .formBorder()
     }

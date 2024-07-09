@@ -24,5 +24,10 @@ struct AppStyle {
     struct Images {
         static let icon = Image("Icon")
         static let titleIcon = Image("Title")
+        static let matchImage = Image("MatchImage")
+    }
+    
+    struct Constants {
+        static let headerHeight: CGFloat = 35
     }
 }
