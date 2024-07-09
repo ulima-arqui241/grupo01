@@ -46,7 +46,11 @@ class LoginVM @Inject constructor():ViewModel() {
         User("Martin", "Rivas", "05/05/1999", "martin.rivas@example.com", "pass12345", "98990001", "Male", "Cusco"),
         User("Cecilia", "Quispe", "24/10/1980", "cecilia.quispe@example.com", "password987", "02030405", "Female", "Trujillo"),
         User("Omar", "Espinoza", "17/03/1996", "omar.espinoza@example.com", "qwerty123", "06070809", "Male", "Chiclayo"),
-        User("Fernanda", "Garcia", "08/01/1988", "fernanda.garcia@example.com", "admin1234", "10111213", "Female", "Lima"))
+        User("Fernanda", "Garcia", "08/01/1988", "fernanda.garcia@example.com", "admin1234", "10111213", "Female", "Lima"),
+        User("Lucian", "Vasquez", "17/03/1996", "lucianax@gmail.com", "qwerty123", "06070809", "Male", "Chiclayo"),
+        User("Sebastian", "Herrera", "17/03/1996", "sebitas@gmail.com", "qwerty123", "06070809", "Male", "Chiclayo")
+
+    )
     fun CreateUser(user: User){
         users.add(user)
     }
