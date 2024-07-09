@@ -1,5 +1,14 @@
 # **Escenarios**
 
+## Diccionario:
+
+- PERSONA: Tabla principal de la base de datos Atlestat, la cual almacena la información principal de la cuenta registrada. 
+- AMAZON WEB SERVICE (AWS): plataforma de servicios en la nube que ofrece una amplia gama de servicios integrales de centros de datos a nivel global.
+- RDS: Amazon Relational Database Service es una colección de servicios administrados que facilita las tareas de configuración, operación y escalado de una base de datos en la nube.
+- AMAZON COGNITO: directorio de usuarios, un servidor de autenticación y un servicio de autorización para los tokens y credenciales de AWS.
+- USER POOL: directorio de usuarios para la autenticación y autorización de aplicaciones web y móviles.
+- JSON WEB TOKEN: cadena de texto que funciona com token de seguridad, el cual contiene información verificable sobre el usuario autenticado, como su identidad y atributos.
+
 ## Escenario 1:
 
 Como nuevo usuario de la aplicación, se desea poder registrar una cuenta en la aplicación con el correo electrónico como login option. Para poder realizar el formulario y la autenticación del usuario se está empleando Amazon Cognito. 
