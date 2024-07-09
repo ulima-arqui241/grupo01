@@ -465,7 +465,7 @@ fun CoachOptions(navController: NavController,loginVM: LoginVM,feedVM: FeedVM){
                         }
                     }
                     Text("Integrantes", fontWeight = FontWeight.Bold,modifier=Modifier.padding(vertical = 5.dp))
-                    loginVM.Get11Random().forEach {
+                    starting11.forEach {
                         Text(it.nombres+" "+it.apellidos)
                     }
                     Row(modifier=Modifier.fillMaxWidth(),
