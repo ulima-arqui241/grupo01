@@ -1,5 +1,7 @@
 # **Escenarios**
 
+- Diagrama del software completo: ![diagramaCompleto](diagramas/e0.png)
+
 ## Diccionario:
 
 - PERSONA: Tabla principal de la base de datos Atlestat, la cual almacena la información de la cuenta registrada. 
@@ -57,6 +59,8 @@ Mediante el uso de este servicio de AWS, se está cumpliendo el patrón de Compo
 ## Escenario 4:
 
 Una vez que el cliente ya ha ingresado a la aplicación, este va a tener que crear un tipo de perfil. Para esto, se debe emplear el diccionario de endpoints que nos facilita el API Gateway, enfocando este escenario en la creación de un perfil de tipo administrador. Una vez se ha identificado cuál es el endpoint necesario para hacer el tipo de petición requerida, se procede a hacer la petición adjuntando el Json Web Token del cliente para que el API Gateway pueda validarlo con Cognito. En caso la petición se haya verificado correctamente, se crea el perfil administrador mediante el llamado a una función Lambda encargada de crear un query con todas las características requeridas para el endpoint solicitado y almacene el nuevo registro en la base de datos RDS en la tabla administrador. Cuando se crea el registro, la función Lambda recibe un mensaje de confirmación y se encarga de devolver una respuesta al cliente mediante el API Gateway. 
+
+![diagrama E4](diagramas/e4.png)
 
 ## Escenario 5:
 
