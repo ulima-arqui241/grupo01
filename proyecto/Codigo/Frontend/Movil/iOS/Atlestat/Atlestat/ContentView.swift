@@ -8,17 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var auth = AuthenticationManager()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if auth.authenticationState == .authenticated {
+                MainTabView()
+            } else {
+                LoginView()
+            }
         }
-        .padding()
+        .environmentObject(auth)
     }
+}
+
+final class AuthenticationManager: ObservableObject {
+    @Published var authenticationState: AuthenticationState = .authenticated
+    @Published var user: User? = .init(id: UUID().uuidString,
+                                       firstName: "Franco",
+                                       lastName: "Marquez",
+                                       kind: .admin)
 }
 
 #Preview {
     ContentView()
+}
+
+
+enum AuthenticationState {
+    case authenticated
+    case nonAuthenticated
 }
