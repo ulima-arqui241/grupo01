@@ -71,7 +71,7 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
   - Trabajo individual 2
     - [Sato: Serverless](/s011-proyecto/01.%20integrantes/sato/proyectoPersonal2/Serverless.md)
     - [Marquez: Bases de datos NoSQL - Orientadas a documentos](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual/reporteInstrucciones.md)
-    - [Villanueva: Hacking ético](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual/informe.md)
+    - [Villanueva: Infraestructura como código](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual2/informe.md)
     - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md) 
     
     
