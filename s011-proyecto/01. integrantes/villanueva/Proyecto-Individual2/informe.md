@@ -101,19 +101,60 @@ Outputs
 
 ![Outputs](Imagenes/Figura4.2.4.png)
 
+Una vez se ha completado la plantilla, se pasará a crear el Stack en Cloud Formation. Para esto se debe acceder a la opción de crear un nuevo Stack en el servicio ofrecido por AWS. Se deben marcar las casillas “Chose an existing template” y “Upload a template file”, esto con la finalidad de subir la plantilla que se ha desarrollado previamente. Tras completar estos campos se procederá a darle clic al botón next.
+
+### Figura 4.2.5
+Creación de Stack
+
+![Creación de Stack](Imagenes/Figura4.2.5.png)
+
+Tras esto se pedirá ingresar un nombre para la nueva pila. 
+
+### Figura 4.2.6
+Asignación de nombre para el Stack
+
+![Asignación de nombre para el Stack](Imagenes/Figura4.2.6.png)
+
+Despues de asignar el nombre, se deberá dar al botón de next hasta encontrar el cuadro celeste con signo de explicación. En este se deberá marcar el check del mensaje y por último darle al botón con el texto de “Submit”.
+
+### Figura 4.2.7
+Confirmación 
+
+![Confirmación](Imagenes/Figura4.2.7.png)
+
+Tras estos pasos, ya se tendrá el Stack creado con todos los servicios establecidos en la plantilla .yaml. 
+
+### Figura 4.2.8
+Lista de recursos
+
+![Lista de recursos](Imagenes/Figura4.2.8.png)
+
+Una vez tenemos desplegada la lista de los recursos, el usuario puede acceder a estos para visualizarlos y configurarlos a su gusto. En la siguiente imagen se podrá observar como ejemplo la vista que se despliega al seleccionar la función Lambda.
+
+### Figura 4.2.9
+Recurso Lambda
+
+![Recurso Lambda](Imagenes/Figura4.2.9.png)
+
+De igual forma se puede acceder a los outputs creados en la platilla. En este caso se puede acceder al endponit establecido para correr la función Lambda. 
+
+### Figura 4.2.10
+Outputs
+
+![Outputs](Imagenes/Figura4.2.10.png)
+
+Como se puede observar en la siguiente imagen, al acceder a la URL del endpoint, se nos redirige al mensaje establecido en la función Lambda.
+
+### Figura 4.2.11
+Outputs
+
+![Outputs](Imagenes/Figura4.2.11.png)
+
 ### 4.3. Resultados
 
 Tras la penetración y la simulación de explotar una vulnerabilidad, se ha identificado de la página web de Itsec Games no esta lo suficientemente protegida. Esto debido a la facilidad con la que se pudo acceder y realizar los escaneos requeridos por el dueño. Se pudieron identificar correctamente los puertos que se encontraban abiertos, las diferentes direcciones IP que se encontraban en la red y una amplia lista de vulnerabilidades presentes en su página. En lo que respecta a realizar un ataque, los dos tipos de XSS efectuados se dieron con éxito, permitiendo inyectar scripts en la base de datos y una URL adicional que puede ser empleada para atacar a los usuarios de Itsec Games. 
 
 ## 5. Referencias
 
-- Farsole, A. A., Kashikar, A. G., & Zunzunwala, A. (2010). Ethical Hacking. International journal of computer applications, 1(10), 14-20. https://doi.org/10.5120/229-380
-
-- OWASP. (2020). Penetration Testing Methodologies. https://owasp.org/www-project-web-security-testing-guide/stable/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies
-
-- Palmer, C. C. (2001). Ethical hacking. IBM systems journal, 40(3), 769-780. https://doi.org/10.1147/sj.403.0769
-
-- Sahare, B., Naik, A., & Khandey, S. (2014). Study of ethical hacking. Computer Science, 6-10.
-
-- Ushmani, A. (2018). Ethical Hacking. International Journal of Information Technology, 4(6), 1-4.
+- 
 
