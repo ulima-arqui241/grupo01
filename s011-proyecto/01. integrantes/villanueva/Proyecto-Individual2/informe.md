@@ -6,7 +6,21 @@ Para el siguiente componente individual del trabajo, se abordará el tema de Inf
 
 ## 2. Desarrollo Conceptual
 
+Según Ijlal (2020), la Infraestructura como Código (IaC) es la práctica de gestionar y desplegar infraestructura a través de archivos de código en lugar de procesos manuales. Esto significa que se pueden desplegar servidores, bases de datos y redes utilizando líneas de código, lo cual se conoce como "plantillas" que un servicio lee y se encarga de generar lo que se le ha especificado. Este enfoque no solo ayuda con la minimización de errores al momento de desplegar una infraestructura especifica, sino que también asegura la consistencia al crear entornos idénticos cada vez que se despliega la infraestructura (Ijlal, 2020).
 
+La IaC es utilizada comúnmente para automatizar la creación y gestión de entornos de desarrollo, pruebas y producción. De este modo se facilita la escalabilidad, repetibilidad y consistencia de la infraestructura, además de lograr reducir errores humanos y facilitar la configuración de la infraestructura requerrida. Estos beneficios mejoran la eficiencia operativa y fomentan una colaboración más estrecha entre los equipos de desarrollo y operaciones. La IaC también permite una infraestructura más ágil y adaptable a cambios, crucial en entornos de desarrollo e integración continuos.
+
+Entre las herramientas más populares para IaC se encuentran:
+
+- Terraform: Desarrollado por HashiCorp, permite definir infraestructura en un archivo de configuración y desplegarlo en múltiples proveedores de servicios en la nube.
+
+- AWS CloudFormation: Proporciona una manera de modelar y configurar los recursos de AWS para aplicaciones.
+
+- Utiliza un enfoque simple basado en YAML para automatizar la configuración, el despliegue y la gestión de sistemas.
+
+- Facilita la gestión de la configuración y automatización del aprovisionamiento de servidores.
+
+- Proporciona una forma de automatizar la infraestructura mediante scripts de configuración que se pueden versionar y compartir.
 
 ## 3. Consideraciones Técnicas
 
@@ -68,7 +82,7 @@ Búsqueda de servicios
 
 ### 4.1. Escenario práctico
 
-
+Ana, gerente de una empresa de análisis de datos llamada DataInsights, está buscando una solución para exponer sus servicios de análisis de datos a sus clientes. Se ha establecido como objetivo desplegar una infraestructura en la nube base, que permita a los clientes acceder a los servicios de análisis de datos de DataInsights mediante una API, sin necesidad de gestionar servidores o infraestructura adicional. Esto incluye la creación de una función Lambda que procese las solicitudes de análisis, un bucket de S3 para almacenar datos de entrada y salida, y un API Gateway que actúe como un frontend para las solicitudes HTTP.
 
 ### 4.2. Pasos para la demo
 
@@ -160,5 +174,6 @@ Tras la ejecución de la plantilla en CloudFormation, se ha desplegado con éxit
 
 ## 5. Referencias
 
-- 
+- Fowler, M. (2016). Infrastructure As Code. martinfowler.com. https://martinfowler.com/bliki/InfrastructureAsCode.html
 
+- Ijlal, T. (2020). Securing and Embracing Infrastructure as Code. isaca. https://www.isaca.org/resources/isaca-journal/issues/2020/volume-4/securing-and-embracing-infrastructure-as-code
