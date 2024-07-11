@@ -1,6 +1,6 @@
 # Serverless: Desarrollo en la Nube sin Servidores
 
-## Serverless: ¿Qué es y por qué te interesa?
+## Concepto
 
 Serverless es la nueva forma de crear y ejecutar aplicaciones en la nube, donde el proveedor (como AWS, Azure o Google Cloud) se encarga de toda la infraestructura. Tú solo te centras en escribir el código, y la nube se encarga de escalar tu aplicación automáticamente según la demanda, cobrándote únicamente por el tiempo de ejecución real.
 
@@ -29,10 +29,10 @@ Los grandes de la nube tienen sus propias soluciones: AWS Lambda, Azure Function
 ## Ventajas
 
 - **Ahorro:** No pagas por servidores que no usas.
-- **Escalabilidad automática:** Tu aplicación crece sin que tengas que hacer nada.
-- **Productividad:** Olvídate de la infraestructura y céntrate en desarrollar.
-- **Lanzamientos rápidos:** Despliega tus aplicaciones en un abrir y cerrar de ojos.
-- **Menos dolores de cabeza:** No más preocupaciones por la gestión de servidores.
+- **Escalabilidad automática:** Tu aplicación puede crecer sin mucha manipulación.
+- **Productividad:** Menos enfoque en la infraestructura y más en el desarrollo.
+- **Lanzamientos rápidos:** Despliega tus aplicaciones rápidamente.
+- **Menos complicaciones:**  Menor complejidad en la gestión de servidores.
 
 ## Desventajas
 
