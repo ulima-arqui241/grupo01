@@ -68,61 +68,38 @@ Búsqueda de servicios
 
 ### 4.1. Escenario práctico
 
-José, propietario de Itsec Games, un sitio web de juegos en línea, está preocupado por la seguridad de su plataforma. Reconoce la importancia de proteger los datos de sus usuarios y la integridad de su sitio web. Para garantizar la seguridad de su plataforma, decide contratar a un hacker ético para realizar un escaneo a la página web y verificar la seguridad de esta. El objetivo principal de esta evaluación de seguridad es identificar y mitigar posibles vulnerabilidades en el sitio web itsecgames.com y el servidor en el que se está alojando. Esto incluye la identificación de puertos abiertos, la evaluación de vulnerabilidades de la página web y facilidad de identificar las conexiones e información del servidor. En caso se identifique una vulnerabilidad, José ha cedido el permiso para poder explotarla y ver como es que se comporta la página frente a esta.
+
 
 ### 4.2. Pasos para la demo
 
-En primer lugar, es necesario poder obtener la dirección IP del servidor en el que esta hosteada la web, para lo cual se utilizara la pagina whatweb, la cual se encargara de brindarnos la información necesaria.
+Para poder crear un Stack en Cloud Formation, es necesario contar con una plantilla la cual cuente con los diferentes servicios que se desean crear a partir del formato establecido por Amazon. En este caso se utilizará una plantilla en .yaml, la cual se explicara a continuación.
+La versión estándar que se debe emplear es la "2010-09-09" y el apartado de Resources es el único obligatorio para poder subir la plantilla Cloud Formation. El primer servicio por instanciar va a ser una función Lambda encargada de retornar un mensaje. En el recurso LambdaFunction se está asignando una función Lambda, servicio que permite poder ejecutar código de forma serverless. LambdaLogGroup consta en la creación de un grupo de logs en CloudWatch Logs para almacenar los logs de la función Lambda. Mientras que con LambdaRole se está asignado un rol IAM asumido por la función, proporcionando los permisos básicos necesarios para controlar qué acciones puede realizar y a qué recursos puede acceder.
 
 ### Figura 4.2.1
-Información de dirección objetivo
+Creación de función Lambda
 
-![Información de dirección objetivo](Imagenes/Figura4.2.1.png)
+![Creación de función Lambda](Imagenes/Figura4.2.1.png)
 
-Teniendo esta información, se puede utilizar Nmap para realizar la penetración. Es necesario abrir la consola para verificar que se cuente con el programa instalado correctamente. Para esto se debe ingresar el comando nmap y esperar a que se despliegue la información de comandos que presenta el sistema para poder verificar que este instalado correctamente. Tras esto, se procede a realizar el primer escaneo enfocado a identificar cuales son los puertos que se encuentran abiertos en la red objetivo. Para esto se emplea el comando nmap -sT 31.3.96.40. En este caso el resultado nos dice que los puertos que estan abiertos son el 22, 80 y 443.
+En segundo lugar, tenemos la creación de una API Gateway. Esta tiene como función proporcionar un endpoint, lo cual permite invocar la función Lambda a través de una solicitud. En el bloque de código HttpApi, se está estableciendo que el servicio a utilizar es API Gateway con el protocolo HTTP. En HttpApiLambdaIntegration se esta especificando que se desea crear una integración para a API. También es necesario obtener el ARN de la función Lambda. Con esto se está indicando a API la función Lambda a la que debe enviar las solicitudes. Con el HttpApiRoute se esta creando una ruta en el API Gateway, especificando que esta responderá a solicitudes HTTP GET en el endpoint. Por último, en LambdaApiPermission se están asignando los permisos necesarios al API Gateway para poder invocar la función Lambda. 
 
 ### Figura 4.2.2
-Escaneo simple de puertos
+Creación de función HTTP Gateway
 
-![Escaneo simple de puertos](Imagenes/Figura4.2.2.png)
+![Creación de función HTTP Gateway](Imagenes/Figura4.2.2.png)
 
-Para la identificación de los puertos, también se puede realizar un escaneo de tipo forzado. Para este se utiliza el comando nmap -sS. Adicional a esto, se puede realizar un pin a las diferentes IP que se encuentran conectadas a la red, lo cual nos otorgara información más sensible sobre el objetivo. En este caso, dado que se han identificado puertos abiertos, se seleccionarán los puertos que se desean escanear con el comando -p, siendo el comando final nmap -sS -p 80,443 31.3.96.0/24.
+En tercer lugar, S3Bucket esta especificando la creación de un Bucket de S3. Adicionalmente, en el campo “DeletionPolicy: Retain” se está especificando que el bucket no debe eliminarse en caso el usuario decida eliminar el Stack creado. Cabe resaltar que debido a que los Buckets S3 requiere de un nombre único, no es necesario especificar un nombre en la plantilla, AWS se encargara de generar uno que no se este utilizando. 
 
 ### Figura 4.2.3
-Escaneo forzado a las IP de la red
+Creación de Bucket S3
 
-![Escaneo forzado a las IP de la red](Imagenes/Figura4.2.3.png)
+![Creación de Bucket S3](Imagenes/Figura4.2.3.png)
 
-Contando con esta información, lo que se procederá a hacer es utilizar una de las direcciones IP conectadas a la red como un decoy, adicionando el comando -D seguido de la dirección señuelo. Este paso se realiza con la finalidad de esconder la IP de la máquina origen que está realizando la exploración. El comando final para esta acción es el siguiente, nmap -sS -D 31.3.96.177 -p 80,443 31.3.96.0/24. A este también se le puede adicionar un método para predecir el sistema operativo en el cual se esta alojando el servidor, adicionado -O previa a la ip objetivo seleccionada, nmap -sS -D 31.3.96.177 -p 80,443 -O 31.3.96.205.
+Finalmente, EndpointURL se utiliza para proporcionar la URL del endpoint de la API creada.
 
 ### Figura 4.2.4
-Predicción de sistema operativo
+Outputs
 
-![Predicción de sistema operativo](Imagenes/Figura4.2.4.png)
-
-Para finalizar con la penetración, se procederá a identificar las vulnerabilidades de seguridad con las que cuenta la página web. Nmap cuenta con una gran variedad de scripts para revisar si es que el objetivo cuenta con vulnerabilidades específicas. Sin embargo, también se presenta la posibilidad de ejecutar todos los scripts secuencialmente y obtener un reporte de que vulnerabilidades se han identificado. Par esto se procederá a adicionar el comando --script vuln, donde el comando final será el siguiente, nmap -sS -D 31.3.96.177 --script vuln 31.3.96.205.
-
-### Figura 4.2.5
-Identificación de vulnerabilidades
-
-![Identificación de vulnerabilidades](Imagenes/Figura4.2.5.png)
-
-Dado que la pagina utilizada principalmente está elaborada específicamente para el test de penetraciones, mas no para el test de vulnerabilidades, para la parte de explotar una vulnerabilidad se va a emplear la página web https://pentest-ground.com:4280/. Para esta demo se va a brindar un ejemplo de como realizar un ataque Cross Site Scripting (XSS). Este tipo de ataques se caracterizan por la inyección de código aprovechando una vulnerabilidad de seguridad dentro de una pagina web. Para el primer caso se va a realizar un ataque XSS reflejado, el cual se limita a incrustar el código malicioso en una URL. Para esto, se empleará un script simple recuperado del siguiente repositorio de Github, https://github.com/swisskyrepo/PayloadsAllTheThings. Al identificar que la pagina objetivo presenta una barra de texto la cual nos redirige o realiza una acción cuando se rellena, se puede realizar este tipo de ataques. Para este caso se utilizará el siguiente script:
-< script>alert('Prueba Demo XSS')</ script>
-Al ejecutarlo se podrá observar la caja de alerta y se cargará una nueva URL con el script inyectado:
-https://pentest-ground.com:4280/vulnerabilities/xss_r/?name=%3Cscript%3Ealert%28%27Prueba+Demo+XSS%27%29%3C%2Fscript%3E#
-
-### Figura 4.2.6
-Ataque XSS reflejado
-
-![Ataque XSS reflejado](Imagenes/Figura4.2.6.png)
-
-En el segundo caso, se va a realizar un ataque XSS almacenado. Este se encarga de almacenar el código malicioso en la base de datos del objetivo, haciendo que cada vez que un usuario ingresa a la pagina web, el script se ejecute de manera automática. Para esto, se va a utilizar el script previo. En este caso, se puede identificar que la alerta se ejecuta en el enlace original, y cada vez que el usuario recargue la página seguirá saliendo hasta que se haga un reset a la base de datos.
-
-### Figura 4.2.7
-Ataque XSS almacenado
-
-![Ataque XSS almacenado](Imagenes/Figura4.2.7.png)
+![Outputs](Imagenes/Figura4.2.4.png)
 
 ### 4.3. Resultados
 
