@@ -68,10 +68,10 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
     - [Marquez: Bases de datos NoSQL - Orientadas a documentos](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual/reporteInstrucciones.md)
     - [Villanueva: Hacking ético](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual/informe.md)
     - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md)
-  <!-- - Trabajo individual 2
+  - Trabajo individual 2
     - [Sato: Tópicos de arquitectura: Análisis estático](/s011-proyecto/01.%20integrantes/sato/proyectoPersonal/proyecto.md)
-    - [Marquez: Bases de datos NoSQL - Orientadas a documentos](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual/reporteInstrucciones.md)
+    - [Marquez: Stress testing](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual%202/reporte.md)
     - [Villanueva: Hacking ético](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual/informe.md)
-    - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md) -->
+    - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual/informe.md)
     
     
