@@ -72,6 +72,10 @@ Búsqueda de servicios
 
 ### 4.2. Pasos para la demo
 
+Para poder llevar a cabo la infraestructura como código, primero es necesario realizar un diagrama que represente los servicios que se van a integrar en la plantilla. Para el diseño de este diagrame se están empleando los lineamientos establecidos por AWS.
+
+![Diagrama](Imagenes/Diagrama.png)
+
 Para poder crear un Stack en Cloud Formation, es necesario contar con una plantilla la cual cuente con los diferentes servicios que se desean crear a partir del formato establecido por Amazon. En este caso se utilizará una plantilla en .yaml, la cual se explicara a continuación.
 La versión estándar que se debe emplear es la "2010-09-09" y el apartado de Resources es el único obligatorio para poder subir la plantilla Cloud Formation. El primer servicio por instanciar va a ser una función Lambda encargada de retornar un mensaje. En el recurso LambdaFunction se está asignando una función Lambda, servicio que permite poder ejecutar código de forma serverless. LambdaLogGroup consta en la creación de un grupo de logs en CloudWatch Logs para almacenar los logs de la función Lambda. Mientras que con LambdaRole se está asignado un rol IAM asumido por la función, proporcionando los permisos básicos necesarios para controlar qué acciones puede realizar y a qué recursos puede acceder.
 
@@ -152,7 +156,7 @@ Outputs
 
 ### 4.3. Resultados
 
-Tras la penetración y la simulación de explotar una vulnerabilidad, se ha identificado de la página web de Itsec Games no esta lo suficientemente protegida. Esto debido a la facilidad con la que se pudo acceder y realizar los escaneos requeridos por el dueño. Se pudieron identificar correctamente los puertos que se encontraban abiertos, las diferentes direcciones IP que se encontraban en la red y una amplia lista de vulnerabilidades presentes en su página. En lo que respecta a realizar un ataque, los dos tipos de XSS efectuados se dieron con éxito, permitiendo inyectar scripts en la base de datos y una URL adicional que puede ser empleada para atacar a los usuarios de Itsec Games. 
+Tras la ejecución de la plantilla en CloudFormation, se ha desplegado con éxito una API HTTP integrada con una función Lambda, junto con un bucket de S3. La API Gateway está configurada para invocar la función Lambda mediante una solicitud HTTP GET /prueba, lo que permite a los clientes recibir un mensaje desde Lambda. Además, se ha creado un grupo de logs en CloudWatch para monitorizar las ejecuciones de Lambda y un rol IAM que proporciona los permisos necesarios para su funcionamiento. El bucket de S3 se ha creado con una política de retención, garantizando que los datos almacenados no se eliminarán accidentalmente. Los outputs generados incluyen la URL del endpoint de la API y el nombre del bucket de S3, facilitando el acceso y la gestión de los recursos desplegados.
 
 ## 5. Referencias
 
