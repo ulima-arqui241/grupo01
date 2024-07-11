@@ -72,6 +72,6 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
     - [Sato: Serverless](/s011-proyecto/01.%20integrantes/sato/proyectoPersonal2/Serverless.md)
     - [Marquez: Stress testing](/s011-proyecto/01.%20integrantes/marquez/Proyecto%20individual%202/reporte.md)
     - [Villanueva: Infraestructura como código](/s011-proyecto/01.%20integrantes/villanueva/Proyecto-Individual2/informe.md)
-    - [Landauro: DevOps](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual-2/investigacion.md) 
+    - [Landauro: Arquitecturas móviles](/s011-proyecto/01.%20integrantes/landauro/proyecto-individual-2/investigacion.md) 
     
     
