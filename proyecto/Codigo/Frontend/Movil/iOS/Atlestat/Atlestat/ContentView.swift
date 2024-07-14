@@ -24,7 +24,7 @@ struct ContentView: View {
 }
 
 final class AuthenticationManager: ObservableObject {
-    @Published var authenticationState: AuthenticationState = .authenticated
+    @Published var authenticationState: AuthenticationState = .nonAuthenticated
     @Published var user: User? = .init(id: UUID().uuidString,
                                        firstName: "Franco",
                                        lastName: "Marquez",

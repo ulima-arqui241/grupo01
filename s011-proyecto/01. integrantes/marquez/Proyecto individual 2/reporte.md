@@ -31,13 +31,6 @@ Los conocimientos obtenidos de las pruebas de estrés permiten a los desarrollad
 6. Plantear y aplicar mejoras basado en los resultados obtenidos. Aplicar las pruebas nuevamente para comprobar si los cambios son efectivos
 7. Documentar los casos de prueba, entradas y resultados obtenidos, de manera que otros programadores o gente relacionada al proyecto conozca el proceso y comprenda los limites obtenidos
 
-## Herramientas mas conocidas
-
-Dependiendo de los requerimientos, el rubro del producto y otras condicionantes la eleccion de una herramienta u otra para realizar las pruebas de estres variara entre caso y caso. Por ello es bueno conocer que herramientas existen en el mercado, siendo algunas de estas:
-
-- JMeter
-- 
-
 ## Referencias
 
 1. https://www.zaptest.com/stress-testing-in-software-testing-what-is-it-types-processes-approaches-tools-more
