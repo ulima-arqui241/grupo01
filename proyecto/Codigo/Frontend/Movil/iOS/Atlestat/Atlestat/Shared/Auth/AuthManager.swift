@@ -16,6 +16,7 @@ enum AuthenticationState {
 enum AWSCognitoCases: String {
     case signUp = "AWSCognitoIdentityProviderService.SignUp"
     case initiateAuth = "AWSCognitoIdentityProviderService.InitiateAuth"
+    case verifyEmail = "AWSCognitoIdentityProviderService.ConfirmSignUp"
     
 }
 enum HTTPMethods: String {
@@ -51,6 +52,26 @@ final class AuthenticationManager: ObservableObject {
         return request
     }
     
+    func sendRequest(request: URLRequest) async throws -> Bool {
+        let ( data , response) = try await urlSession.data(for: request)
+        
+        //Just to check
+        let dataJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let dataJSON = dataJSON as? [String: Any] {
+            if let message = dataJSON["message"] {
+                print(message)
+                return false
+            }
+        }
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            print("Unexpected response")
+            return false
+        }
+        
+        return httpResponse.statusCode == 200
+    }
+    
     func sendRequest<T>(request: URLRequest, responseType: T.Type) async throws -> T? where T: Decodable {
         
         let (data, response) = try await urlSession.data(for: request)
@@ -60,14 +81,14 @@ final class AuthenticationManager: ObservableObject {
             return nil
         }
         
-        if httpResponse.statusCode != 200 {
-            print("Not 200 response, gotten: \(httpResponse.statusCode)")
-            return nil
-        }
-        
         let dataJSON = try? JSONSerialization.jsonObject(with: data, options: [])
         if let dataJSON = dataJSON as? [String: Any] {
             print(dataJSON)
+        }
+        
+        if httpResponse.statusCode != 200 {
+            print("Not 200 response, gotten: \(httpResponse.statusCode)")
+            return nil
         }
         
         let finalData = try JSONDecoder().decode(responseType.self, from: data)
@@ -105,14 +126,79 @@ final class AuthenticationManager: ObservableObject {
         }
     }
     
-    func signUp(email: String, password: String) {
-        print("SIGNUP: Username ( \(email) )")
+    func cognitoSignUp(registerInfo: RegisterFinalInfo) async throws -> Bool {
         let parameters: [String: Any] = [
-            "Username" : email,
-            "Password" : password,
+            "Username" : registerInfo.email,
+            "Password" : registerInfo.password,
+            "ClientId": clientId
+//            "UserAttributes": [
+//                [
+//                    "name": "1",
+//                    "value": [
+//                        "name": "member",
+//                        "value": [
+//                            [
+//                                "name": "name",
+//                                "value": "Name"
+//                            ],
+//                            [
+//                                "name": "email",
+//                                "value": registerInfo.email
+//                            ],
+//                            
+//                            [
+//                                "name": "addresses",
+//                                "value": registerInfo.step1Info.address
+//                            ],
+//                            [
+//                                "name": "birthdate",
+//                                "value": registerInfo.step1Info.birthDate
+//                            ],
+//                            [
+//                                "name": "gender",
+//                                "value": registerInfo.step1Info.gender
+//                            ],
+//                            [
+//                                "name": "phoneNumbers",
+//                                "value": registerInfo.step1Info.phoneNumber
+//                            ],
+//                            [
+//                                "name": "givenName",
+//                                "value": registerInfo.step1Info.givenNames
+//                            ],
+//                            [
+//                                "name": "familyNames",
+//                                "value": registerInfo.step1Info.familyNames
+//                            ]
+//                        ]
+//                    ]
+//                ],
+//            ]
+        ]
+        let request = buildCognitoRequest(cognitoCase: .signUp, method: .post, parameters: parameters)
+        
+        let finalData = try await sendRequest(request: request)
+        
+        //Do some checks
+        
+        return true
+    }
+    
+    func cognitoVerifyEmail(email: String, code: String) async throws -> Bool{
+        let parameters: [String: Any] = [
+            "ConfirmationCode": code,
+            "Username": email,
             "ClientId": clientId
         ]
-        //        sendCognitoRequest(cognitoCase: .signUp, method: .post, parameters: parameters)
+        
+        let request = buildCognitoRequest(cognitoCase: .verifyEmail, method: .post, parameters: parameters)
+        
+        do {
+            return try await sendRequest(request: request)
+        } catch {
+            print("Error", error)
+            return false
+        }
     }
     
     func changeAuthState(state: AuthenticationState) {
@@ -121,3 +207,22 @@ final class AuthenticationManager: ObservableObject {
         }
     }
 }
+
+struct CognitoAttribute: Codable {
+    let name: String
+    let value: String
+}
+
+//func verifyEmail(confirmationCode: String) -> String {
+//    print("verifyEmail: Username ( \(email) )")
+//    let parameters: [String: Any] = [
+//        "ConfirmationCode": confirmationCode,
+//        "Username": email,
+//        "ClientId": clientId
+//    ]
+//    var retCode = waitForRequest(url: "AWSCognitoIdentityProviderService.ConfirmSignUp", method: "Post", parameters: parameters)
+//    if (retCode) == "Success" {
+//        retCode = login(email: email, password: password)
+//    }
+//    return retCode
+//}

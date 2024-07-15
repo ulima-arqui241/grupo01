@@ -13,6 +13,7 @@ struct CodeValidationView: View {
     @EnvironmentObject var auth: AuthenticationManager
     
     @State private var verificationCode = ""
+    @State private var isChecking = false
     @State private var isVerified = false
     
     var registerInfo: RegisterFinalInfo
@@ -35,9 +36,35 @@ struct CodeValidationView: View {
                         .padding(.top, 30)
                     
                     CapsuleButton(text: "Verificar") {
-                        isVerified = true
+                        isChecking = true
+                        Task {
+                            do {
+                                let isVerified = try await auth.cognitoVerifyEmail(email: registerInfo.email, code: verificationCode)
+                                if isVerified {
+                                    DispatchQueue.main.async {
+                                        self.isVerified = isVerified
+                                    }
+                                    return
+                                }
+                                
+                                DispatchQueue.main.async {
+                                    self.isChecking = isVerified
+                                }
+                            } catch {
+                                print("error verifying")
+                                DispatchQueue.main.async {
+                                    self.isChecking = false
+                                }
+                            }
+                        }
                     }
                     .frame(width: 160)
+                    .disabled(isChecking)
+                    .opacity(!isChecking ? 1 : 0.5)
+                    
+                    if isChecking {
+                        ProgressView()
+                    }
                 }
                 .padding(.horizontal)
                 .expandVertically(.top)

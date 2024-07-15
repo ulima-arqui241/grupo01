@@ -10,6 +10,7 @@ import SwiftUI
 struct RegisterViewSecond: View {
     
     @EnvironmentObject var router: BaseRouter
+    @EnvironmentObject var auth: AuthenticationManager
     
     @State private var email = "franco1.alfra@gmail.com"
     @State private var password = "Contra1."
@@ -34,9 +35,22 @@ struct RegisterViewSecond: View {
             .expandVertically()
             
             CapsuleButton(text: "Continuar registro") {
-                router.navigate(to: RegisterView.Routes.codeValidation(.init(step1Info: registerStep1Info,
-                                                                             email: email,
-                                                                             password: password)))
+                //Perform sign up call
+                Task {
+                    do {
+                        let isSignedUp = try await auth.cognitoSignUp(registerInfo: .init(step1Info: registerStep1Info,
+                                                                         email: email,
+                                                                         password: password))
+                        if isSignedUp {
+                            router.navigate(to: RegisterView.Routes.codeValidation(.init(step1Info: registerStep1Info,
+                                                                                         email: email,
+                                                                                         password: password)))
+                            return
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
             }
             .padding(.horizontal, 50)
             .padding(.bottom, 30)
