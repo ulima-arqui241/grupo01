@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1F3CB22C44830200D3202B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CB12C44830200D3202B /* AuthManager.swift */; };
+		2A1F3CB42C4486D400D3202B /* LoginModelActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CB32C4486D400D3202B /* LoginModelActions.swift */; };
+		2A1F3CB62C44873F00D3202B /* LoginModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CB52C44873F00D3202B /* LoginModelState.swift */; };
+		2A1F3CB82C4487A800D3202B /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CB72C4487A800D3202B /* LoginModel.swift */; };
+		2A1F3CBB2C44884A00D3202B /* LoginIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBA2C44884A00D3202B /* LoginIntent.swift */; };
+		2A1F3CBE2C4490FC00D3202B /* CognitoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */; };
+		2A1F3CC02C449DD600D3202B /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBF2C449DD600D3202B /* UserDefaultsExtensions.swift */; };
 		2A71A2872C16B0A900F204F1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2862C16B0A900F204F1 /* Style.swift */; };
 		2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */; };
 		2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */; };
@@ -34,7 +41,6 @@
 		2A786F492C3D142C0008ABE1 /* FinalizedMatchPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A786F482C3D142C0008ABE1 /* FinalizedMatchPopUp.swift */; };
 		2A786F4B2C3D25040008ABE1 /* PlayerStatsModPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A786F4A2C3D25040008ABE1 /* PlayerStatsModPopUp.swift */; };
 		2ADD5BCB2C3C8C85009CD40C /* MVIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD5BCA2C3C8C85009CD40C /* MVIContainer.swift */; };
-		2ADD5BD02C3C8D56009CD40C /* LoginIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD5BCF2C3C8D56009CD40C /* LoginIntents.swift */; };
 		2ADD5BD32C3C8E9D009CD40C /* PersonalizeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD5BD22C3C8E9D009CD40C /* PersonalizeUserView.swift */; };
 		2ADD5BD72C3C8EFF009CD40C /* PersonalizeUserIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD5BD62C3C8EFF009CD40C /* PersonalizeUserIntents.swift */; };
 		2ADD5BDA2C3C8F82009CD40C /* PersonalizeUserModelActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADD5BD92C3C8F82009CD40C /* PersonalizeUserModelActions.swift */; };
@@ -50,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1F3CB12C44830200D3202B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		2A1F3CB32C4486D400D3202B /* LoginModelActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModelActions.swift; path = Atlestat/Shared/Auth/LoginModelActions.swift; sourceTree = SOURCE_ROOT; };
+		2A1F3CB52C44873F00D3202B /* LoginModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModelState.swift; path = Atlestat/Shared/Auth/LoginModelState.swift; sourceTree = SOURCE_ROOT; };
+		2A1F3CB72C4487A800D3202B /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = Atlestat/Shared/Auth/LoginModel.swift; sourceTree = SOURCE_ROOT; };
+		2A1F3CBA2C44884A00D3202B /* LoginIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntent.swift; sourceTree = "<group>"; };
+		2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoResponse.swift; sourceTree = "<group>"; };
+		2A1F3CBF2C449DD600D3202B /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		2A71A2862C16B0A900F204F1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextInput.swift; sourceTree = "<group>"; };
 		2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -77,7 +90,6 @@
 		2A786F482C3D142C0008ABE1 /* FinalizedMatchPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizedMatchPopUp.swift; sourceTree = "<group>"; };
 		2A786F4A2C3D25040008ABE1 /* PlayerStatsModPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsModPopUp.swift; sourceTree = "<group>"; };
 		2ADD5BCA2C3C8C85009CD40C /* MVIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVIContainer.swift; sourceTree = "<group>"; };
-		2ADD5BCF2C3C8D56009CD40C /* LoginIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginIntents.swift; path = "Atlestat/Shared/MVI Files/LoginIntents.swift"; sourceTree = SOURCE_ROOT; };
 		2ADD5BD22C3C8E9D009CD40C /* PersonalizeUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeUserView.swift; sourceTree = "<group>"; };
 		2ADD5BD62C3C8EFF009CD40C /* PersonalizeUserIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeUserIntents.swift; sourceTree = "<group>"; };
 		2ADD5BD92C3C8F82009CD40C /* PersonalizeUserModelActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeUserModelActions.swift; sourceTree = "<group>"; };
@@ -104,9 +116,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1F3CB02C4482F100D3202B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F3CBC2C4490EF00D3202B /* Response */,
+				2A1F3CB12C44830200D3202B /* AuthManager.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2A1F3CB92C44883F00D3202B /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F3CBA2C44884A00D3202B /* LoginIntent.swift */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		2A1F3CBC2C4490EF00D3202B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		2A71A2852C16B0A000F204F1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F3CB02C4482F100D3202B /* Auth */,
 				2ADD5BC92C3C8C6F009CD40C /* MVI Files */,
 				2A71A28A2C16B37E00F204F1 /* Components */,
 				2A71A2862C16B0A900F204F1 /* Style.swift */,
@@ -149,6 +187,7 @@
 				2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */,
 				2A786F312C3CDB6E0008ABE1 /* ImageExtensions.swift */,
 				2A786F3F2C3CF6D90008ABE1 /* DateExtensions.swift */,
+				2A1F3CBF2C449DD600D3202B /* UserDefaultsExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,7 +352,7 @@
 		9D5A118C2C04C9BC007FF196 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9D5A118F2C04C9D0007FF196 /* Interactor */,
+				2A1F3CB92C44883F00D3202B /* Intent */,
 				9D5A118E2C04C9CC007FF196 /* View */,
 				9D5A118D2C04C9C7007FF196 /* Model */,
 			);
@@ -323,6 +362,9 @@
 		9D5A118D2C04C9C7007FF196 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F3CB32C4486D400D3202B /* LoginModelActions.swift */,
+				2A1F3CB52C44873F00D3202B /* LoginModelState.swift */,
+				2A1F3CB72C4487A800D3202B /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,14 +375,6 @@
 				9D5A11902C04C9E2007FF196 /* LoginView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9D5A118F2C04C9D0007FF196 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				2ADD5BCF2C3C8D56009CD40C /* LoginIntents.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,13 +448,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A786F302C3CD9FC0008ABE1 /* AppHeader.swift in Sources */,
+				2A1F3CB82C4487A800D3202B /* LoginModel.swift in Sources */,
 				2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */,
 				2A786F452C3D06E30008ABE1 /* PlayerCoachingCell.swift in Sources */,
 				2ADD5BDF2C3C8FBC009CD40C /* PersonalizeUserModel.swift in Sources */,
+				2A1F3CBE2C4490FC00D3202B /* CognitoResponse.swift in Sources */,
 				2A786F3E2C3CF0DF0008ABE1 /* MainTabView.swift in Sources */,
+				2A1F3CB42C4486D400D3202B /* LoginModelActions.swift in Sources */,
+				2A1F3CB62C44873F00D3202B /* LoginModelState.swift in Sources */,
 				2A786F2E2C3CD9820008ABE1 /* Router.swift in Sources */,
 				2A786F402C3CF6D90008ABE1 /* DateExtensions.swift in Sources */,
 				2A71A2972C16BFB000F204F1 /* CapsuleButton.swift in Sources */,
+				2A1F3CBB2C44884A00D3202B /* LoginIntent.swift in Sources */,
 				2A786F292C3CD5EF0008ABE1 /* LiveCoachingView.swift in Sources */,
 				2A786F322C3CDB6E0008ABE1 /* ImageExtensions.swift in Sources */,
 				9D5A11912C04C9E2007FF196 /* LoginView.swift in Sources */,
@@ -429,6 +468,7 @@
 				2A786F362C3CE0B60008ABE1 /* Match.swift in Sources */,
 				2A786F2C2C3CD8EB0008ABE1 /* HomeFeed.swift in Sources */,
 				2ADD5BCB2C3C8C85009CD40C /* MVIContainer.swift in Sources */,
+				2A1F3CB22C44830200D3202B /* AuthManager.swift in Sources */,
 				2ADD5BDA2C3C8F82009CD40C /* PersonalizeUserModelActions.swift in Sources */,
 				2A71A2952C16BF7000F204F1 /* ColorDivider.swift in Sources */,
 				2A786F4B2C3D25040008ABE1 /* PlayerStatsModPopUp.swift in Sources */,
@@ -443,8 +483,8 @@
 				9D5A11802C04C8B4007FF196 /* ContentView.swift in Sources */,
 				2A786F242C3CD5330008ABE1 /* LiveCoachingModel.swift in Sources */,
 				9D5A117E2C04C8B4007FF196 /* AtlestatApp.swift in Sources */,
+				2A1F3CC02C449DD600D3202B /* UserDefaultsExtensions.swift in Sources */,
 				2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */,
-				2ADD5BD02C3C8D56009CD40C /* LoginIntents.swift in Sources */,
 				2ADD5BD32C3C8E9D009CD40C /* PersonalizeUserView.swift in Sources */,
 				2A786F1F2C3CD4F20008ABE1 /* LiveCoachingModelActions.swift in Sources */,
 				2ADD5BD72C3C8EFF009CD40C /* PersonalizeUserIntents.swift in Sources */,

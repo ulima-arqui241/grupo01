@@ -23,20 +23,9 @@ struct ContentView: View {
     }
 }
 
-final class AuthenticationManager: ObservableObject {
-    @Published var authenticationState: AuthenticationState = .nonAuthenticated
-    @Published var user: User? = .init(id: UUID().uuidString,
-                                       firstName: "Franco",
-                                       lastName: "Marquez",
-                                       kind: .admin)
-}
 
 #Preview {
     ContentView()
 }
 
 
-enum AuthenticationState {
-    case authenticated
-    case nonAuthenticated
-}
