@@ -13,9 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if auth.authenticationState == .authenticated {
+            switch auth.authenticationState {
+            case .authenticated:
                 MainTabView()
-            } else {
+            case .register:
+                RegisterView()
+            case .nonAuthenticated:
                 LoginView()
             }
         }

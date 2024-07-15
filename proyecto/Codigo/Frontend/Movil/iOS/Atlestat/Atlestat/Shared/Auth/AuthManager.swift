@@ -30,9 +30,16 @@ final class AuthenticationManager: ObservableObject {
     @Published var authenticationState: AuthenticationState = .nonAuthenticated
     
     private let cognitoUrl: URL = URL(string:"https://cognito-idp.us-east-1.amazonaws.com/")!
-    private let clientId = "2l96vh57j0pfg1sqv56jf7ni8"
+    private let clientId = "73flrg3fbgttftv5erolqe4g4g"
     
     private let urlSession = URLSession.shared
+    
+    init() {
+//        let token = UserDefaults.getAccessToken()
+//        if let token {
+//            self.authenticationState = .authenticated
+//        }
+    }
     
     func buildCognitoRequest(cognitoCase: AWSCognitoCases, method: HTTPMethods, parameters: [String: Any]) -> URLRequest{
         var request = URLRequest(url: cognitoUrl)
@@ -56,6 +63,11 @@ final class AuthenticationManager: ObservableObject {
         if httpResponse.statusCode != 200 {
             print("Not 200 response, gotten: \(httpResponse.statusCode)")
             return nil
+        }
+        
+        let dataJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+        if let dataJSON = dataJSON as? [String: Any] {
+            print(dataJSON)
         }
         
         let finalData = try JSONDecoder().decode(responseType.self, from: data)

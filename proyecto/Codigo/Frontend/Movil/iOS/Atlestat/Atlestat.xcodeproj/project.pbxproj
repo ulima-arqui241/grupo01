@@ -14,6 +14,11 @@
 		2A1F3CBB2C44884A00D3202B /* LoginIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBA2C44884A00D3202B /* LoginIntent.swift */; };
 		2A1F3CBE2C4490FC00D3202B /* CognitoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */; };
 		2A1F3CC02C449DD600D3202B /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CBF2C449DD600D3202B /* UserDefaultsExtensions.swift */; };
+		2A1F3CC32C44A4A000D3202B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CC22C44A4A000D3202B /* RegisterView.swift */; };
+		2A1F3CC52C44B1B500D3202B /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CC42C44B1B500D3202B /* RegisterRequest.swift */; };
+		2A1F3CC82C44B91300D3202B /* RegisterViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CC72C44B91300D3202B /* RegisterViewSecond.swift */; };
+		2A1F3CCA2C44BE6100D3202B /* CodeValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CC92C44BE6100D3202B /* CodeValidationView.swift */; };
+		2A1F3CCC2C44C09D00D3202B /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F3CCB2C44C09D00D3202B /* BackButton.swift */; };
 		2A71A2872C16B0A900F204F1 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2862C16B0A900F204F1 /* Style.swift */; };
 		2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */; };
 		2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */; };
@@ -63,6 +68,11 @@
 		2A1F3CBA2C44884A00D3202B /* LoginIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntent.swift; sourceTree = "<group>"; };
 		2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoResponse.swift; sourceTree = "<group>"; };
 		2A1F3CBF2C449DD600D3202B /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		2A1F3CC22C44A4A000D3202B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		2A1F3CC42C44B1B500D3202B /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		2A1F3CC72C44B91300D3202B /* RegisterViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewSecond.swift; sourceTree = "<group>"; };
+		2A1F3CC92C44BE6100D3202B /* CodeValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidationView.swift; sourceTree = "<group>"; };
+		2A1F3CCB2C44C09D00D3202B /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		2A71A2862C16B0A900F204F1 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		2A71A28B2C16B3A300F204F1 /* FormTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextInput.swift; sourceTree = "<group>"; };
 		2A71A2902C16B64B00F204F1 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
@@ -119,6 +129,7 @@
 		2A1F3CB02C4482F100D3202B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F3CC62C44B1B900D3202B /* Request */,
 				2A1F3CBC2C4490EF00D3202B /* Response */,
 				2A1F3CB12C44830200D3202B /* AuthManager.swift */,
 			);
@@ -139,6 +150,24 @@
 				2A1F3CBD2C4490FC00D3202B /* CognitoResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		2A1F3CC12C44A49200D3202B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F3CC22C44A4A000D3202B /* RegisterView.swift */,
+				2A1F3CC72C44B91300D3202B /* RegisterViewSecond.swift */,
+				2A1F3CC92C44BE6100D3202B /* CodeValidationView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		2A1F3CC62C44B1B900D3202B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2A1F3CC42C44B1B500D3202B /* RegisterRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		2A71A2852C16B0A000F204F1 /* Shared */ = {
@@ -177,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				2A71A2962C16BFB000F204F1 /* CapsuleButton.swift */,
+				2A1F3CCB2C44C09D00D3202B /* BackButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -340,6 +370,7 @@
 		9D5A118B2C04C9B5007FF196 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2A1F3CC12C44A49200D3202B /* Register */,
 				2A786F3C2C3CF0D20008ABE1 /* MainTabView */,
 				2A786F2A2C3CD8D40008ABE1 /* Home */,
 				2A786F1C2C3CD4B90008ABE1 /* LiveCoaching */,
@@ -451,6 +482,7 @@
 				2A1F3CB82C4487A800D3202B /* LoginModel.swift in Sources */,
 				2A71A28C2C16B3A300F204F1 /* FormTextInput.swift in Sources */,
 				2A786F452C3D06E30008ABE1 /* PlayerCoachingCell.swift in Sources */,
+				2A1F3CCA2C44BE6100D3202B /* CodeValidationView.swift in Sources */,
 				2ADD5BDF2C3C8FBC009CD40C /* PersonalizeUserModel.swift in Sources */,
 				2A1F3CBE2C4490FC00D3202B /* CognitoResponse.swift in Sources */,
 				2A786F3E2C3CF0DF0008ABE1 /* MainTabView.swift in Sources */,
@@ -458,6 +490,7 @@
 				2A1F3CB62C44873F00D3202B /* LoginModelState.swift in Sources */,
 				2A786F2E2C3CD9820008ABE1 /* Router.swift in Sources */,
 				2A786F402C3CF6D90008ABE1 /* DateExtensions.swift in Sources */,
+				2A1F3CCC2C44C09D00D3202B /* BackButton.swift in Sources */,
 				2A71A2972C16BFB000F204F1 /* CapsuleButton.swift in Sources */,
 				2A1F3CBB2C44884A00D3202B /* LoginIntent.swift in Sources */,
 				2A786F292C3CD5EF0008ABE1 /* LiveCoachingView.swift in Sources */,
@@ -478,11 +511,13 @@
 				2A786F212C3CD5140008ABE1 /* LiveCoachingModelState.swift in Sources */,
 				2ADD5BE12C3C922E009CD40C /* Country.swift in Sources */,
 				2A786F392C3CEC580008ABE1 /* Team.swift in Sources */,
+				2A1F3CC52C44B1B500D3202B /* RegisterRequest.swift in Sources */,
 				2ADD5BE32C3C93C4009CD40C /* Sport.swift in Sources */,
 				2A786F342C3CE09E0008ABE1 /* MatchFeedView.swift in Sources */,
 				9D5A11802C04C8B4007FF196 /* ContentView.swift in Sources */,
 				2A786F242C3CD5330008ABE1 /* LiveCoachingModel.swift in Sources */,
 				9D5A117E2C04C8B4007FF196 /* AtlestatApp.swift in Sources */,
+				2A1F3CC32C44A4A000D3202B /* RegisterView.swift in Sources */,
 				2A1F3CC02C449DD600D3202B /* UserDefaultsExtensions.swift in Sources */,
 				2A71A2912C16B64B00F204F1 /* ViewExtensions.swift in Sources */,
 				2ADD5BD32C3C8E9D009CD40C /* PersonalizeUserView.swift in Sources */,
@@ -490,6 +525,7 @@
 				2ADD5BD72C3C8EFF009CD40C /* PersonalizeUserIntents.swift in Sources */,
 				2A786F3B2C3CEFA10008ABE1 /* User.swift in Sources */,
 				2A786F422C3D02E30008ABE1 /* Player.swift in Sources */,
+				2A1F3CC82C44B91300D3202B /* RegisterViewSecond.swift in Sources */,
 				2A71A2872C16B0A900F204F1 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

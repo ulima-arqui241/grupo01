@@ -14,7 +14,7 @@ struct LoginView: View {
     private var modelState: LoginModelState { container.model }
     
     @State private var email = "mrcoalba@gmail.com"
-    @State private var password = "123456"
+    @State private var password = "Contra1."
     
     @EnvironmentObject var authManager: AuthenticationManager
      
@@ -81,7 +81,7 @@ struct LoginView: View {
                         .padding(.horizontal, 40)
                     
                     Button {
-                        //TODO: Create account
+                        authManager.changeAuthState(state: .register)
                     } label: {
                         Text("Crear cuenta")
                             .foregroundStyle(AppColors.foregroundColor)
