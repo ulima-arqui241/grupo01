@@ -8,27 +8,27 @@
   
 ## Funcionalidad primaria
 - Establecer estructura general del sistema
-  - CU01: Gestión de Acceso
-  - CU02: Registro de Usuario	
-  - CU03: Visualización de Partidos	
-  - CU04: Personalización de Perfil	
+  - CU-01: Gestión de Acceso
+  - CU-02: Registro de Usuario	
+  - CU-03: Visualización de Partidos	
+  - CU-04: Personalización de Perfil	
 - Integracion de nuevos usuarios
 - **Casos de uso:**
-  - CU01: Gestión de Acceso	
-  - CU02: Registro de Usuario	
-  - CU04: Personalización de Perfil	
+  - CU-01: Gestión de Acceso	
+  - CU-02: Registro de Usuario	
+  - CU-04: Personalización de Perfil	
 - Soportar la funcionalidades base
 - **Casos de uso:**
-  - CU03: Visualización de Partidos	
-  - CU05: Gestión de Sesiones de Coaching	
-  - CU06: Monitoreo de Sesiones en Vivo	
-  - CU07: Análisis de Rendimiento del Participante	
+  - CU-03: Visualización de Partidos	
+  - CU-05: Gestión de Sesiones de Coaching	
+  - CU-06: Monitoreo de Sesiones en Vivo	
+  - CU-07: Análisis de Rendimiento del Participante	
 - Soporte de atributos y restricciones asociadas
 - **Casos de uso:**
-  - CU08: Gestión de Seguridad de Datos	
-  - CU09: Optimización de Respuestas	
-  - CU10: Mantenimiento y Actualización del Sistema	
-  - CU11: Integración de Nuevas Funcionalidades	
+  - CU-08: Gestión de Seguridad de Datos	
+  - CU-09: Optimización de Respuestas	
+  - CU-10: Mantenimiento y Actualización del Sistema	
+  - CU-11: Integración de Nuevas Funcionalidades	
 
 ## Escenarios atributos de calidad
 
