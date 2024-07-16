@@ -2,21 +2,14 @@
 
 Dado que se empieza de un sistema hecho de cero, en esta iteracion se busca crear submodulos que ayuden a cumplir los atributos y funcionalidades planteadas
 
-## Submodulo de autenticacion
+## Submódulo de autorización y autenticación
 
-Responsable de las siguientes funciones:
+Será el responsable de la validación de credenciales, la generación de tokens y registro de usuarios.
 
-- Validacion de credenciales
-- Generacion de tokens de autenticacion
-- Verificacion de seguridad ante intentos
+## Submódulo de API
 
-## Submodulo de gestion de usuarios
+Tendrá la responsabilidad de gestionar los endpoints, utilizar la autenticación para permitir al usuario realizar acciones y gestionar la lambdas.
 
-Responsable de las siguientes funciones:
+## Submódulo de base de datos
 
-- Registro de usuarios
-- Actualizacion de datos de usuarios
-
-## Submodulo de base de datos
-
-Posee los esquemas de usuarios y tokens
+Gestionará la creación de base de datos relacionales y no relacionales.
