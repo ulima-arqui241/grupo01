@@ -7,24 +7,28 @@
 - Generar un diseño autoescalable y altamente transaccional
   
 ## Funcionalidad primaria
-
+- Establecer estructura general del sistema
+  - CU01: Gestión de Acceso
+  - CU02: Registro de Usuario	
+  - CU03: Visualización de Partidos	
+  - CU04: Personalización de Perfil	
 - Integracion de nuevos usuarios
 - **Casos de uso:**
-  - UC-1
-  - UC-2
-  - UC-4
+  - CU01: Gestión de Acceso	
+  - CU02: Registro de Usuario	
+  - CU04: Personalización de Perfil	
 - Soportar la funcionalidades base
 - **Casos de uso:**
-  - UC-3
-  - UC-5
-  - UC-6
-  - UC-7
+  - CU03: Visualización de Partidos	
+  - CU05: Gestión de Sesiones de Coaching	
+  - CU06: Monitoreo de Sesiones en Vivo	
+  - CU07: Análisis de Rendimiento del Participante	
 - Soporte de atributos y restricciones asociadas
 - **Casos de uso:**
-  - UC-8
-  - UC-9
-  - UC-10
-  - UC-11
+  - CU08: Gestión de Seguridad de Datos	
+  - CU09: Optimización de Respuestas	
+  - CU10: Mantenimiento y Actualización del Sistema	
+  - CU11: Integración de Nuevas Funcionalidades	
 
 ## Escenarios atributos de calidad
 
