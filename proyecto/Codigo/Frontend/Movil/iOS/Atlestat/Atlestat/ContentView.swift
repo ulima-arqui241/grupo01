@@ -13,9 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         Group {
-            if auth.authenticationState == .authenticated {
+            switch auth.authenticationState {
+            case .authenticated:
                 MainTabView()
-            } else {
+            case .register:
+                RegisterView()
+            case .nonAuthenticated:
                 LoginView()
             }
         }
@@ -23,20 +26,9 @@ struct ContentView: View {
     }
 }
 
-final class AuthenticationManager: ObservableObject {
-    @Published var authenticationState: AuthenticationState = .authenticated
-    @Published var user: User? = .init(id: UUID().uuidString,
-                                       firstName: "Franco",
-                                       lastName: "Marquez",
-                                       kind: .admin)
-}
 
 #Preview {
     ContentView()
 }
 
 
-enum AuthenticationState {
-    case authenticated
-    case nonAuthenticated
-}
