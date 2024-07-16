@@ -1,0 +1,4 @@
+# Paso 1: Revisar Entradas
+| Proposito de diseño| Funcionalidad primaria | Escenarios de calidad | Restricciones y preocupaciones de arquitectura|
+|---|---|---|--|
+Funcionalidades relacionadas a la integracion de nuevos usuarios| CU-01: Gestión de Acceso, CU-02: Registro de Usuario	,CU-04: Personalización de Perfil| QA-03: Mantenibilidad, QA-08: Escalabilidad, QA-01: Seguridad, QA-05:Seguridad, QA-08:Escalabilidad	, QA-15:Disponibilidad| CON-02:Conformidad con GDPR	,CON-05:Seguridad de la Información	,CRN-01:Seguridad y autenticación,CRN-02:Rendimiento y Escalabilidad,CRN-03:Mantenibilidad y Flexibilidad ,CRN-04:Integración de Tecnologías y Servicios 

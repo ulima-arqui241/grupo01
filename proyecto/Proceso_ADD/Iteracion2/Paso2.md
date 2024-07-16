@@ -4,7 +4,7 @@ El objetivo de esta iteracion es abordar las funcionalidades relacionadas a la g
 
 ## Drivers
 
-- Casos de uso: Funcionalidades relacionadas a la integracion de nuevos usuarios
+- Casos de uso
   - CU-03
   - CU-05
   - CU-06

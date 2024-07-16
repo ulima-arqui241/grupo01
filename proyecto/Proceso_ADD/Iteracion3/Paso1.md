@@ -1,0 +1,4 @@
+# Paso 1: Revisar Entradas
+| Proposito de diseño| Funcionalidad primaria | Escenarios de calidad | Restricciones y preocupaciones de arquitectura|
+|---|---|---|--|
+Interfaces gráficas intuitivas y con buena experiencia de usuario | CU-01:Gestión de Acceso,CU-02:Registro de Usuario	,CU-04:Personalización de Perfil	,CU-05:Gestión de Sesiones de Coaching	,CU-06:Monitoreo de Sesiones en Vivo	,CU-07 :Análisis de Rendimiento del Participante	| QA-04:Integridad,QA-12:Confiabilidad	,QA-16:Rendimiento	| CON-01:Compatibilidad Multiplataforma	,CRN-02:Rendimiento y Escalabilidad,CRN-05:Usabilidad y Experiencia del Usuario

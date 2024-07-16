@@ -4,7 +4,7 @@ El objetivo de esta iteracion es establecer el sistema de autenticacion mientras
 
 ## Drivers
 
-- Casos de uso: Funcionalidades relacionadas a la integracion de nuevos usuarios
+- Casos de uso
   - CU-1
   - CU-2
   - CU-4

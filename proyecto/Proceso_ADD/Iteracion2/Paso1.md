@@ -1,0 +1,4 @@
+# Paso 1: Revisar Entradas
+| Proposito de diseño| Funcionalidad primaria | Escenarios de calidad | Restricciones y preocupaciones de arquitectura|
+|---|---|---|--|
+Gestión de datos de datos en tiempo real y APIs | CU-03: Visualización de Partidos	,CU-05:Gestión de Sesiones de Coaching	,CU-06:Monitoreo de Sesiones en Vivo	,CU-07:Análisis de Rendimiento del Participante	| QA-02: Rendimiento,QA-07:Disponibilidad,QA-09:Mantenibilidad,QA-10:Rendimiento,QA-13:Disponibilidad,QA-16:Rendimiento| CON-03:Dependencia de APIs Externas	,CON-04:Escalabilidad Dinámica	,CON-06:Mantenimiento y Actualización Fácil	, CRN-02:Rendimiento y Escalabilidad,CRN-03:Mantenibilidad y Flexibilidad ,CRN-04:Integración de Tecnologías y Servicios ,CRN-05:Usabilidad y Experiencia del Usuario,CRN-06:Gestión de Datos y Almacenamiento 
