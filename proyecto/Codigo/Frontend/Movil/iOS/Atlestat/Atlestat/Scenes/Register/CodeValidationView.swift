@@ -44,11 +44,10 @@ struct CodeValidationView: View {
                                     DispatchQueue.main.async {
                                         self.isVerified = isVerified
                                     }
-                                    return
                                 }
                                 
                                 DispatchQueue.main.async {
-                                    self.isChecking = isVerified
+                                    self.isChecking = false
                                 }
                             } catch {
                                 print("error verifying")

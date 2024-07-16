@@ -30,8 +30,8 @@ final class AuthenticationManager: ObservableObject {
     
     @Published var authenticationState: AuthenticationState = .nonAuthenticated
     
-    private let cognitoUrl: URL = URL(string:"https://cognito-idp.us-east-1.amazonaws.com/")!
-    private let clientId = "73flrg3fbgttftv5erolqe4g4g"
+    private let cognitoUrl: URL = URL(string:"COGNITOURL")!
+    private let clientId = "CLIENTID"
     
     private let urlSession = URLSession.shared
     
@@ -53,14 +53,15 @@ final class AuthenticationManager: ObservableObject {
     }
     
     func sendRequest(request: URLRequest) async throws -> Bool {
-        let ( data , response) = try await urlSession.data(for: request)
+        let (data , response) = try await urlSession.data(for: request)
         
         //Just to check
         let dataJSON = try? JSONSerialization.jsonObject(with: data, options: [])
         if let dataJSON = dataJSON as? [String: Any] {
             if let message = dataJSON["message"] {
+                print("Error")
+                print(dataJSON)
                 print(message)
-                return false
             }
         }
         
@@ -69,7 +70,11 @@ final class AuthenticationManager: ObservableObject {
             return false
         }
         
-        return httpResponse.statusCode == 200
+        if httpResponse.statusCode != 200 {
+            print("Not 200")
+        }
+        
+        return true
     }
     
     func sendRequest<T>(request: URLRequest, responseType: T.Type) async throws -> T? where T: Decodable {
@@ -116,6 +121,8 @@ final class AuthenticationManager: ObservableObject {
                 return
             }
             
+            print(authData)
+            
             UserDefaults.saveAuthData(field: .accessToken, value: authData.authResult.accessToken)
             UserDefaults.saveAuthData(field: .refreshToken, value: authData.authResult.refreshToken)
             
@@ -131,55 +138,13 @@ final class AuthenticationManager: ObservableObject {
             "Username" : registerInfo.email,
             "Password" : registerInfo.password,
             "ClientId": clientId
-//            "UserAttributes": [
-//                [
-//                    "name": "1",
-//                    "value": [
-//                        "name": "member",
-//                        "value": [
-//                            [
-//                                "name": "name",
-//                                "value": "Name"
-//                            ],
-//                            [
-//                                "name": "email",
-//                                "value": registerInfo.email
-//                            ],
-//                            
-//                            [
-//                                "name": "addresses",
-//                                "value": registerInfo.step1Info.address
-//                            ],
-//                            [
-//                                "name": "birthdate",
-//                                "value": registerInfo.step1Info.birthDate
-//                            ],
-//                            [
-//                                "name": "gender",
-//                                "value": registerInfo.step1Info.gender
-//                            ],
-//                            [
-//                                "name": "phoneNumbers",
-//                                "value": registerInfo.step1Info.phoneNumber
-//                            ],
-//                            [
-//                                "name": "givenName",
-//                                "value": registerInfo.step1Info.givenNames
-//                            ],
-//                            [
-//                                "name": "familyNames",
-//                                "value": registerInfo.step1Info.familyNames
-//                            ]
-//                        ]
-//                    ]
-//                ],
-//            ]
         ]
         let request = buildCognitoRequest(cognitoCase: .signUp, method: .post, parameters: parameters)
         
         let finalData = try await sendRequest(request: request)
         
         //Do some checks
+        print(finalData)
         
         return true
     }
@@ -212,17 +177,3 @@ struct CognitoAttribute: Codable {
     let name: String
     let value: String
 }
-
-//func verifyEmail(confirmationCode: String) -> String {
-//    print("verifyEmail: Username ( \(email) )")
-//    let parameters: [String: Any] = [
-//        "ConfirmationCode": confirmationCode,
-//        "Username": email,
-//        "ClientId": clientId
-//    ]
-//    var retCode = waitForRequest(url: "AWSCognitoIdentityProviderService.ConfirmSignUp", method: "Post", parameters: parameters)
-//    if (retCode) == "Success" {
-//        retCode = login(email: email, password: password)
-//    }
-//    return retCode
-//}
