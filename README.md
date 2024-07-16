@@ -42,6 +42,14 @@ Bienvenidos al repositorio del Proyecto del Curso del Grupo 1. Aquí encontrará
     - [Restricciones](./proyecto/Proceso_ADD/Drivers/Restricciones.md)
     - [Preocupaciones a nivel de arquitectura](./proyecto/Proceso_ADD/Drivers/ConcArquitectura.md)
   - [Elección de drivers de entrada](./proyecto/Proceso_ADD/Entradas.md)
+  - Iteración 0
+    - [Paso 1](./proyecto/Proceso_ADD/Iteracion0/Paso1.md)
+    - [Paso 2](./proyecto/Proceso_ADD/Iteracion1/Paso2.md)
+    - [Paso 3](./proyecto/Proceso_ADD/Iteracion1/Paso3.md)
+    - [Paso 4](./proyecto/Proceso_ADD/Iteracion1/Paso4.md)
+    - [Paso 5](./proyecto/Proceso_ADD/Iteracion1/Paso5.md)
+    - [Paso 6](./proyecto/Proceso_ADD/Iteracion1/Paso6.md)
+    - [Paso 7](./proyecto/Proceso_ADD/Iteracion1/Paso7.md)
   - Iteración 1
     - [Paso 2](./proyecto/Proceso_ADD/Iteracion1/Paso2.md)
     - [Paso 3](./proyecto/Proceso_ADD/Iteracion1/Paso3.md)
