@@ -9,12 +9,26 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State private var email = ""
-    @State private var pass = ""
+    @StateObject var container: MVIContainer<LoginIntentProtocol, LoginModelState>
+    private var intent: LoginIntentProtocol { container.intent }
+    private var modelState: LoginModelState { container.model }
+    
+    @State private var email = "mrcoalba@gmail.com"
+    @State private var password = "Contra1."
+    
+    @EnvironmentObject var authManager: AuthenticationManager
+     
+    init() {
+        let model = Model()
+        let intent = Intent(modelActions: model)
+        let container = MVIContainer(intent: intent as LoginIntentProtocol,
+                                     model: model as LoginModelState,
+                                     modelChangePublisher: model.objectWillChange)
+        self._container = StateObject(wrappedValue: container)
+    }
     
     var body: some View {
         ZStack{
-            
             VStack {
                 AppImages.icon
                     .resizable()
@@ -42,9 +56,12 @@ struct LoginView: View {
                 
                 VStack (spacing: 25) {
                     FormTextInput(placeholder: "Mail", text: $email, icon: .mail)
-                    FormTextInput(placeholder: "Contrasena", text: $pass, icon: .lock ,secure: true)
+                    FormTextInput(placeholder: "Contraseña", text: $password, icon: .lock ,secure: true)
                     CapsuleButton(text: "Ingresar") {
                         //TODO: Login
+                        Task {
+                            await intent.loginWithEmail(email: email, password: password)
+                        }
                     }
                     .padding(.horizontal)
                 }.padding(.horizontal, 20)
@@ -54,7 +71,7 @@ struct LoginView: View {
                     Button {
                         //TODO: Change password
                     } label: {
-                        Text("Cambiar contrasena")
+                        Text("Cambiar contraseña")
                             .foregroundStyle(AppColors.foregroundColor)
                             .shadow(color: AppColors.terciaryColor
                                     ,radius: 1)
@@ -64,7 +81,7 @@ struct LoginView: View {
                         .padding(.horizontal, 40)
                     
                     Button {
-                        //TODO: Create account
+                        authManager.changeAuthState(state: .register)
                     } label: {
                         Text("Crear cuenta")
                             .foregroundStyle(AppColors.foregroundColor)
@@ -75,6 +92,9 @@ struct LoginView: View {
                 .padding(.vertical)
             }
             
+        }
+        .onAppear {
+            self.intent.setAuthManager(authManager)
         }
     }
 }
